@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">SBPD_app</string>
     <string name="welcome_msg">Welcome to SBPD App</string>
+    <string name="form1">Intial Form</string>
+    <string name="form1subtitle">Intial Form please fill it first</string>
+
 </resources>
