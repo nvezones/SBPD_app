@@ -6,7 +6,9 @@
     <color name="colorwhite">#ffffff</color>
     <color name="backgroundColor">#20CCE2</color>
     <color name="blackColor">#0A0A0A</color>
-    <color name="purpleColor">#D62763</color>
+    <color name="redColor">#D62763</color>
+    <color name="purpleColor">#6A27D6</color>
+    <color name="orangeColor">#FF9800</color>
 
 
 

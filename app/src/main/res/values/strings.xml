@@ -3,5 +3,26 @@
     <string name="welcome_msg">Welcome to SBPD App</string>
     <string name="form1">Intial Form</string>
     <string name="form1subtitle">Intial Form please fill it first</string>
+    <string name="form2">Position of Battery</string>
+    <string name="form2subtitle">Please fill battery details</string>
+    <string name="form3">Position of Power Transformer</string>
+    <string name="form3subtitle">Please fill details of all Power Transformers</string>
+    <string name="form4">Position of 33KV VCB</string>
+    <string name="form4subtitle">Please fill details of 33KV VCB</string>
+    <string name="form5">Position of 11KV VCB</string>
+    <string name="form5subtitle">Please fill details of 11KV VCB</string>
+    <string name="form6">Position of Isolators</string>
+    <string name="form6subtitle">Please fill Isolators details</string>
+    <string name="form7">Requirement of Materials</string>
+    <string name="form7subtitle">Please fill Requirements for 11kv and 33 kv isolators</string>
+    <string name="form8">Status of 11KV and 33KV L.A</string>
+    <string name="form8subtitle">Please fill working status of both isolators</string>
+    <string name="form9">Status of 33KV and 11KV Metering Units</string>
+    <string name="form9subtitle">Please fill Meter Reading of 11kv and 33kv</string>
+    <string name="form10">Position of 33KV and 11KV Meters</string>
+    <string name="form10subtitle">Please fill Position of Meters of 11kv and 33kv</string>
+    <string name="form11">General Report</string>
+    <string name="form11subtitle">Click here to view and download the Report</string>
+
 
 </resources>
