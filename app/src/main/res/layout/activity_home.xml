@@ -20,6 +20,7 @@
     android:gravity="center"
     android:clipToPadding="false">
     <android.support.v7.widget.CardView
+        android:id="@+id/frm1"
         android:layout_width="160dp"
         android:elevation="10dp"
         android:layout_height="180dp"
@@ -253,32 +254,35 @@
             android:elevation="10dp"
             android:layout_height="180dp"
             android:layout_margin="10dp">
+
             <LinearLayout
+                android:id="@+id/frmiso"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
                 android:background="@color/orangeColor"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="70dp"
-                    android:src="@drawable/form"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorwhite"
-                    android:text="@string/form6"
-                    android:layout_marginTop="10dp"
-                    android:textStyle="bold" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="normal"
-                    android:textColor="@color/colorwhite"
-                    android:text="@string/form6subtitle"
-                    android:gravity="center" />
+                    android:src="@drawable/form" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/form6"
+                    android:textColor="@color/colorwhite"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/form6subtitle"
+                    android:textColor="@color/colorwhite"
+                    android:textStyle="normal" />
 
 
             </LinearLayout>

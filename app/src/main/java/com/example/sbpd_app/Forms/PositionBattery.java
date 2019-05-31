@@ -1,5 +1,6 @@
 package com.example.sbpd_app.Forms;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -7,6 +8,7 @@ import android.os.Build;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v4.content.FileProvider;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -27,6 +29,7 @@ public class PositionBattery extends AppCompatActivity {
     Button button;
     ImageView imageView;
     String currentPhotoPath;
+    Dialog dialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +42,24 @@ public class PositionBattery extends AppCompatActivity {
                 dispatchTakePictureIntent();
             }
         });
+        if(imageView.getDrawable()==null)
+        {
+            imageView.setImageResource(R.drawable.noimage);
+        }
+
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog=new Dialog(PositionBattery.this);
+                dialog.setContentView(R.layout.imageprev);
+                ImageView view=(ImageView)dialog.findViewById(R.id.imgprev);
+                view.setImageDrawable(imageView.getDrawable());
+                dialog.setCancelable(true);
+                dialog.show();
+
+            }
+        });
+
     }
 
 
