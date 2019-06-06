@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/backgroundColor"
     tools:context=".Home">
     <LinearLayout
@@ -19,31 +20,36 @@
     android:gravity="center"
     android:clipToPadding="false">
     <android.support.v7.widget.CardView
+        android:id="@+id/frm1"
         android:layout_width="160dp"
+        android:elevation="10dp"
         android:layout_height="180dp"
         android:layout_margin="10dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            android:id="@+id/form1"
+            android:background="@color/orangeColor"
             android:gravity="center">
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="70dp"
-
+                android:src="@drawable/form"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:text="@string/form1"
+                android:textColor="@color/colorwhite"
                 android:layout_marginTop="10dp"
                 android:textStyle="bold" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="normal"
-
+                android:padding="5dp"
+                android:textColor="@color/colorwhite"
                 android:text="@string/form1subtitle"
                 android:gravity="center" />
 
@@ -59,30 +65,34 @@
     <android.support.v7.widget.CardView
         android:layout_width="160dp"
         android:layout_height="180dp"
+        android:id="@+id/form2"
+        android:elevation="10dp"
         android:layout_margin="10dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            android:background="@color/orangeColor"
             android:gravity="center">
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="70dp"
-
+                android:src="@drawable/form"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
-                android:text="@string/form1"
+                android:text="@string/form2"
+                android:textColor="@color/colorwhite"
                 android:layout_marginTop="10dp"
                 android:textStyle="bold" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="normal"
-
-                android:text="@string/form1subtitle"
+                android:padding="5dp"
+                android:textColor="@color/colorwhite"
+                android:text="@string/form2subtitle"
                 android:gravity="center" />
 
 
@@ -111,30 +121,34 @@
         <android.support.v7.widget.CardView
             android:layout_width="160dp"
             android:layout_height="180dp"
+            android:elevation="10dp"
             android:layout_margin="10dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
+                android:background="@color/orangeColor"
                 android:gravity="center">
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="70dp"
-
+                    android:src="@drawable/form"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
-                    android:text="@string/form1"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:textColor="@color/colorwhite"
+                    android:text="@string/form3"
                     android:layout_marginTop="10dp"
                     android:textStyle="bold" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="normal"
-
-                    android:text="@string/form1subtitle"
+                    android:textColor="@color/colorwhite"
+                    android:text="@string/form3subtitle"
                     android:gravity="center" />
 
 
@@ -149,30 +163,32 @@
         <android.support.v7.widget.CardView
             android:layout_width="160dp"
             android:layout_height="180dp"
+            android:elevation="10dp"
             android:layout_margin="10dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
+                android:background="@color/orangeColor"
                 android:gravity="center">
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="70dp"
-
+                    android:src="@drawable/form"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
-                    android:text="@string/form1"
+                    android:textColor="@color/colorwhite"
+                    android:text="@string/form4"
                     android:layout_marginTop="10dp"
                     android:textStyle="bold" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="normal"
-
-                    android:text="@string/form1subtitle"
+                    android:textColor="@color/colorwhite"
+                    android:text="@string/form4subtitle"
                     android:gravity="center" />
 
 
@@ -196,30 +212,32 @@
         <android.support.v7.widget.CardView
             android:layout_width="160dp"
             android:layout_height="180dp"
+            android:elevation="10dp"
             android:layout_margin="10dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
+                android:background="@color/orangeColor"
                 android:gravity="center">
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="70dp"
-
+                    android:src="@drawable/form"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
-                    android:text="@string/form1"
+                    android:textColor="@color/colorwhite"
+                    android:text="@string/form5"
                     android:layout_marginTop="10dp"
                     android:textStyle="bold" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="normal"
-
-                    android:text="@string/form1subtitle"
+                    android:textColor="@color/colorwhite"
+                    android:text="@string/form5subtitle"
                     android:gravity="center" />
 
 
@@ -233,33 +251,38 @@
 
         <android.support.v7.widget.CardView
             android:layout_width="160dp"
+            android:elevation="10dp"
             android:layout_height="180dp"
             android:layout_margin="10dp">
+
             <LinearLayout
+                android:id="@+id/frmiso"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:background="@color/orangeColor"
+                android:gravity="center"
+                android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="70dp"
+                    android:src="@drawable/form" />
 
-                    />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
-                    android:text="@string/form1"
                     android:layout_marginTop="10dp"
+                    android:text="@string/form6"
+                    android:textColor="@color/colorwhite"
                     android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textStyle="normal"
-
-                    android:text="@string/form1subtitle"
-                    android:gravity="center" />
-
+                    android:gravity="center"
+                    android:text="@string/form6subtitle"
+                    android:textColor="@color/colorwhite"
+                    android:textStyle="normal" />
 
 
             </LinearLayout>
@@ -288,25 +311,28 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
+                android:background="@color/orangeColor"
                 android:gravity="center">
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="70dp"
-
+                    android:src="@drawable/form"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
-                    android:text="@string/form1"
+                    android:gravity="center"
+                    android:text="@string/form7"
+                    android:textColor="@color/colorwhite"
                     android:layout_marginTop="10dp"
                     android:textStyle="bold" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="normal"
+                    android:textColor="@color/colorwhite"
 
-                    android:text="@string/form1subtitle"
+                    android:text="@string/form7subtitle"
                     android:gravity="center" />
 
 
@@ -321,32 +347,38 @@
         <android.support.v7.widget.CardView
             android:layout_width="160dp"
             android:layout_height="180dp"
+            android:elevation="10dp"
             android:layout_margin="10dp">
+
             <LinearLayout
+                android:id="@+id/status11kv33kv"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:background="@color/orangeColor"
+                android:gravity="center"
+                android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="70dp"
+                    android:src="@drawable/form" />
 
-                    />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
-                    android:text="@string/form1"
                     android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/form8"
+                    android:textColor="@color/colorwhite"
                     android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textStyle="normal"
-
-                    android:text="@string/form1subtitle"
-                    android:gravity="center" />
-
+                    android:gravity="center"
+                    android:text="@string/form8subtitle"
+                    android:textColor="@color/colorwhite"
+                    android:textStyle="normal" />
 
 
             </LinearLayout>
@@ -358,6 +390,147 @@
 
 
     </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:clipToPadding="false">
+            <android.support.v7.widget.CardView
+                android:layout_width="160dp"
+                android:layout_height="180dp"
+                android:elevation="10dp"
+                android:layout_margin="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/orangeColor"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/form"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/form9"
+                        android:textColor="@color/colorwhite"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textColor="@color/colorwhite"
+                        android:text="@string/form9subtitle"
+                        android:gravity="center" />
+
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="160dp"
+                android:layout_height="180dp"
+                android:elevation="10dp"
+                android:layout_margin="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/orangeColor"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/form"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/colorwhite"
+                        android:text="@string/form10"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textColor="@color/colorwhite"
+                        android:text="@string/form10subtitle"
+                        android:gravity="center" />
+
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="340dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center"
+            android:elevation="10dp"
+            android:layout_margin="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/orangeColor"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/iconroval"
+                    android:src="@drawable/ic_print_black_24dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/form11"
+                    android:textColor="@color/colorwhite"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:text="@string/form11subtitle"
+                    android:textColor="@color/colorwhite"
+                    android:gravity="center" />
+
+
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+
     </LinearLayout>
 
 </ScrollView>
