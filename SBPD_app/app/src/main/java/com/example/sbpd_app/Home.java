@@ -26,7 +26,7 @@ public class Home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         form1=(LinearLayout)findViewById(R.id.form1);
         isofrm=(LinearLayout)findViewById(R.id.frmiso);
-        statuskvmeter=(LinearLayout)findViewById(R.id.statusmetering);
+        statuskvmeter=(LinearLayout)findViewById(R.id.statuskvmeter);
         statuskvla=(LinearLayout)findViewById(R.id.status11kv33kv);
         cardView=(CardView)findViewById(R.id.form2);
         form1.setOnClickListener(new View.OnClickListener() {

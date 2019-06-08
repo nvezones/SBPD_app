@@ -17,10 +17,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Forms.StatuOfKv"></activity>
+        <activity android:name=".Forms.StatusOfMetering"></activity>
+        <activity android:name=".Forms.StatuOfKv" />
         <activity android:name=".Forms.PositionOfIsolator" />
         <activity android:name=".Forms.PositionBattery" />
-        <activity android:name=".Forms.StatusOfMetering" />
         <activity android:name=".Forms.Form1" />
         <activity android:name=".Home" />
         <activity android:name=".MainActivity">

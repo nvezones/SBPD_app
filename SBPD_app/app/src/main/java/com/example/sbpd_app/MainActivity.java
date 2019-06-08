@@ -22,9 +22,8 @@ public class MainActivity extends AppCompatActivity {
         imageView=(ImageView)findViewById(R.id.splash_image);
         textView=(TextView)findViewById(R.id.splash_text);
         Animation animation= AnimationUtils.loadAnimation(this,R.anim.splashscreen);
-        Animation animation1=AnimationUtils.loadAnimation(this,R.anim.splashimage);
         imageView.setAnimation(animation);
-        textView.setAnimation(animation1);
+        textView.setAnimation(animation);
         Thread t=new Thread(){
             @Override
             public void run() {

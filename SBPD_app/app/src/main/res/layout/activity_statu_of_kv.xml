@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Forms.StatuOfKv">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rellay1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/grad"
+                android:paddingBottom="20dp">
+
+                <RelativeLayout
+                    android:id="@+id/imgUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="9dp"
+                        android:adjustViewBounds="true"
+                        android:padding="3dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/form" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cus_profile_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgUser"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15sp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/colorwhite"
+                    android:text="@string/form8"
+                    android:textStyle="bold"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/cus_profile_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cus_profile_name"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="sans-serif"
+                    android:textAllCaps="true"
+                    android:text="@string/form8subtitle"
+                    android:textColor="@color/colorwhite"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/linlay1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rellay1"
+                android:orientation="horizontal">
+
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/grad2"
+                android:layout_below="@+id/linlay1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="30dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Number of 33KV L.A"
+                            android:textColor="@color/colorwhite"
+                            android:textStyle="bold"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:inputType="number"
+                            android:layout_marginTop="10dp"
+                            android:textColorHint="@color/colorwhite"
+                            android:textStyle="bold"
+                            android:layout_marginRight="10dp"
+                            android:focusable="true"
+                            android:background="@color/orangeColor"
+                            android:layout_width="match_parent"
+                            android:textColorHighlight="@color/colorwhite"
+                            android:layout_height="40dp"
+                            android:fontFamily="sans-serif-light"
+                            android:textColor="#000000"
+                            android:textSize="18sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Number of Working 33KV L.A"
+                            android:textColor="@color/colorwhite"
+                            android:textStyle="bold"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:inputType="number"
+                            android:layout_marginTop="10dp"
+                            android:textColorHint="@color/colorwhite"
+                            android:hint=""
+                            android:textStyle="bold"
+                            android:layout_marginRight="10dp"
+                            android:focusable="true"
+                            android:background="@color/orangeColor"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:fontFamily="sans-serif-light"
+                            android:textColorHighlight="@color/colorwhite"
+                            android:textColor="#000000"
+                            android:textSize="18sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Number of defective 33KV L.A"
+                            android:textColor="@color/colorwhite"
+                            android:textStyle="bold"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:inputType="number"
+                            android:layout_marginTop="10dp"
+                            android:textColorHint="@color/colorwhite"
+                            android:textStyle="bold"
+                            android:textColorHighlight="@color/colorwhite"
+                            android:layout_marginRight="10dp"
+                            android:focusable="true"
+                            android:background="@color/orangeColor"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:fontFamily="sans-serif-light"
+                            android:textColor="#000000"
+                            android:textSize="18sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp"
+                            />
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Number of 33KV L.A required"
+                            android:textColor="@color/colorwhite"
+                            android:textStyle="bold"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:inputType="number"
+                            android:layout_marginTop="10dp"
+                            android:textColorHint="@color/colorwhite"
+                            android:textStyle="bold"
+                            android:textColorHighlight="@color/colorwhite"
+                            android:layout_marginRight="10dp"
+                            android:focusable="true"
+                            android:background="@color/orangeColor"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:fontFamily="sans-serif-light"
+                            android:textColor="#000000"
+                            android:textSize="18sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp"
+                            />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Number of  11KV L.A"
+                            android:textColor="@color/colorwhite"
+                            android:textStyle="bold"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:inputType="number"
+                            android:layout_marginTop="10dp"
+                            android:textColorHint="@color/colorwhite"
+                            android:textStyle="bold"
+                            android:textColorHighlight="@color/colorwhite"
+                            android:layout_marginRight="10dp"
+                            android:focusable="true"
+                            android:background="@color/orangeColor"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:fontFamily="sans-serif-light"
+                            android:textColor="#000000"
+                            android:textSize="18sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp"
+                            />
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Number of Working 11KV L.A"
+                            android:textColor="@color/colorwhite"
+                            android:textStyle="bold"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:inputType="number"
+                            android:layout_marginTop="10dp"
+                            android:textColorHint="@color/colorwhite"
+                            android:textStyle="bold"
+                            android:textColorHighlight="@color/colorwhite"
+                            android:layout_marginRight="10dp"
+                            android:focusable="true"
+                            android:background="@color/orangeColor"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:fontFamily="sans-serif-light"
+                            android:textColor="#000000"
+                            android:textSize="18sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp"
+                            />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Number of Non-Working  11KV L.A"
+                            android:textColor="@color/colorwhite"
+                            android:textStyle="bold"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:inputType="number"
+                            android:layout_marginTop="10dp"
+                            android:textColorHint="@color/colorwhite"
+                            android:textStyle="bold"
+                            android:textColorHighlight="@color/colorwhite"
+                            android:layout_marginRight="10dp"
+                            android:focusable="true"
+                            android:background="@color/orangeColor"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:fontFamily="sans-serif-light"
+                            android:textColor="#000000"
+                            android:textSize="18sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp"
+                            />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Number of  11KV L.A required"
+                            android:textColor="@color/colorwhite"
+                            android:textStyle="bold"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:inputType="number"
+                            android:layout_marginTop="10dp"
+                            android:textColorHint="@color/colorwhite"
+                            android:textStyle="bold"
+                            android:textColorHighlight="@color/colorwhite"
+                            android:layout_marginRight="10dp"
+                            android:focusable="true"
+                            android:background="@color/orangeColor"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:fontFamily="sans-serif-light"
+                            android:textColor="#000000"
+                            android:textSize="18sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp"
+                            />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Remark"
+                            android:textColor="@color/colorwhite"
+                            android:textStyle="bold"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:inputType="textMultiLine"
+                            android:lines="8"
+                            android:gravity="top|left"
+                            android:minLines="6"
+                            android:maxLines="10"
+                            android:scrollbars="vertical"
+                            android:layout_marginTop="10dp"
+                            android:textColorHint="@color/colorwhite"
+                            android:textStyle="bold"
+                            android:textColorHighlight="@color/colorwhite"
+                            android:layout_marginRight="10dp"
+                            android:focusable="true"
+                            android:background="@color/orangeColor"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:textColor="#000000"
+                            android:textSize="18sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp"
+                            />
+
+                    </LinearLayout>
+
+
+                    <Button
+                        android:textColor="@color/colorwhite"
+                        android:layout_gravity="center"
+                        android:background="@drawable/roundbutton"
+                        android:id="@+id/cus_profile_update"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:textStyle="bold"
+                        android:text="Save " />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>

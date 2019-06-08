@@ -404,7 +404,7 @@
                 android:elevation="10dp"
                 android:layout_margin="10dp">
                 <LinearLayout
-                    android:id="@+id/statusmetering"
+                    android:id="@+id/statuskvmeter"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
