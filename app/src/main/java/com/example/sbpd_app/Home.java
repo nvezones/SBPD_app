@@ -12,13 +12,14 @@ import com.example.sbpd_app.Forms.Form1;
 import com.example.sbpd_app.Forms.PositionBattery;
 import com.example.sbpd_app.Forms.PositionOfIsolator;
 import com.example.sbpd_app.Forms.StatuOfKv;
+import com.example.sbpd_app.Forms.StatusOfMeter;
 import com.example.sbpd_app.Forms.StatusOfMetering;
 
 public class Home extends AppCompatActivity {
 
     private long backpresstime;
     Toast toastback;
-    LinearLayout form1,isofrm,statuskvla,statuskvmeter;
+    LinearLayout form1,isofrm,statuskvla,statuskvmeter,statusmeter;
     CardView cardView,cardView1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,7 @@ public class Home extends AppCompatActivity {
         form1=(LinearLayout)findViewById(R.id.form1);
         isofrm=(LinearLayout)findViewById(R.id.frmiso);
         statuskvmeter=(LinearLayout)findViewById(R.id.statusmetering);
+        statusmeter=(LinearLayout)findViewById(R.id.statusmeter);
         statuskvla=(LinearLayout)findViewById(R.id.status11kv33kv);
         cardView=(CardView)findViewById(R.id.form2);
         form1.setOnClickListener(new View.OnClickListener() {
@@ -57,6 +59,12 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), StatusOfMetering.class));
+            }
+        });
+        statusmeter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), StatusOfMeter.class));
             }
         });
 
