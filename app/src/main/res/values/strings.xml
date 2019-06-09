@@ -22,7 +22,7 @@
     <string name="form10">Position of 33KV and 11KV Meters</string>
     <string name="form10subtitle">Please fill Position of Meters of 11kv and 33kv</string>
     <string name="form11">General Report</string>
-    <string name="form11subtitle">Click here to view and download the Report</string>
+    <string name="form11subtitle">Please fill the General Report</string>
     <string name="title_activity_power_transformer">PowerTransformer</string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
