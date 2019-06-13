@@ -266,6 +266,106 @@
                             android:layout_height="1dp"
                             android:layout_marginTop="15dp" />
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="24sp"
+                                android:id="@+id/tvId_batcharge"
+                                android:text="Position of Battery Charger"
+                                android:textColor="@color/colorwhite"
+                                android:textStyle="bold"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="15dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="20sp"
+                                android:id="@+id/tvId_supplyVolt"
+                                android:text="Supply Volatage"
+                                android:textColor="@color/colorwhite"
+                                android:textStyle="bold"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="15dp" />
+
+                            <EditText
+                                android:id="@+id/etId_voltAC"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@color/orangeColor"
+                                android:focusable="true"
+                                android:fontFamily="sans-serif-light"
+                                android:hint="AC voltage"
+                                android:textColor="#000000"
+                                android:textColorHighlight="@color/colorwhite"
+                                android:textColorHint="@color/colorwhite"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/etId_voltDC"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@color/orangeColor"
+                                android:focusable="true"
+                                android:fontFamily="sans-serif-light"
+                                android:hint="DC voltage"
+                                android:textColor="#000000"
+                                android:textColorHighlight="@color/colorwhite"
+                                android:textColorHint="@color/colorwhite"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="15dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="20sp"
+                                android:id="@+id/tvId_chargeCurrent"
+                                android:text="Charging Current (in Amp)"
+                                android:textColor="@color/colorwhite"
+                                android:textStyle="bold"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="15dp" />
+
+                            <EditText
+                                android:id="@+id/etId_chargeCurrent"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@color/orangeColor"
+                                android:focusable="true"
+                                android:fontFamily="sans-serif-light"
+                                android:hint="Charging Current (in Amp)"
+                                android:textColor="#000000"
+                                android:textColorHighlight="@color/colorwhite"
+                                android:textColorHint="@color/colorwhite"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:inputType="number"/>
+                        </LinearLayout>
                     </LinearLayout>
 
 

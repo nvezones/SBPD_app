@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".PowerTransformer">
+    tools:context=".Forms.PowerTransformer">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -110,11 +110,13 @@
 
                         <Spinner
                             android:id="@+id/spId_PT"
-                            android:layout_width="wrap_content"
+                            android:layout_width="200dp"
                             android:layout_height="wrap_content"
                             android:dropDownWidth="wrap_content"
                             android:spinnerMode="dropdown"
-                            android:visibility="visible" />
+                            android:visibility="visible"
+                            android:entries="@array/PT"
+                            android:background="@color/orangeColor" />
 
                         <View
                             android:layout_width="match_parent"
@@ -134,7 +136,7 @@
                         <EditText
                             android:id="@+id/etId_slno"
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:layout_marginRight="10dp"
                             android:background="@color/orangeColor"
@@ -165,7 +167,7 @@
                         <EditText
                             android:id="@+id/etId_mfgYear"
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:layout_marginRight="10dp"
                             android:background="@color/orangeColor"
@@ -195,7 +197,7 @@
                         <EditText
                             android:id="@+id/etId_make"
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:layout_marginRight="10dp"
                             android:background="@color/orangeColor"
@@ -209,11 +211,498 @@
                             android:textStyle="bold" />
 
                         <View
-                            android:id="@+id/view"
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_marginTop="15dp" />
 
+                        <TextView
+                            android:id="@+id/tvId_oilLevel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Transformer Oil level in conservator Tank"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/etId_oilLevel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/orangeColor"
+                            android:focusable="true"
+                            android:fontFamily="sans-serif-light"
+                            android:hint="Transformer Oil level in conservator Tank"
+                            android:textColor="#000000"
+                            android:textColorHighlight="@color/colorwhite"
+                            android:textColorHint="@color/colorwhite"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp" />
+
+                        <TextView
+                            android:id="@+id/tvId_BDV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="BDV of transformer oil"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/etId_BDVTop"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@color/orangeColor"
+                                android:focusable="true"
+                                android:fontFamily="sans-serif-light"
+                                android:hint="Top"
+                                android:textColor="#000000"
+                                android:textColorHighlight="@color/colorwhite"
+                                android:textColorHint="@color/colorwhite"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/etId_BDVBottom"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@color/orangeColor"
+                                android:focusable="true"
+                                android:fontFamily="sans-serif-light"
+                                android:hint="Bottom"
+                                android:textColor="#000000"
+                                android:textColorHighlight="@color/colorwhite"
+                                android:textColorHint="@color/colorwhite"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp" />
+
+                        <TextView
+                            android:id="@+id/tvId_buRelay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Position of Buchholz Relay"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp" />
+
+                        <RadioGroup
+                            android:id="@+id/rgId_buRelay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/orangeColor"
+                            android:orientation="vertical">
+
+                            <RadioButton
+                                android:id="@+id/rgId_buRelayWorking"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Working"
+                                android:textColor="@color/colorwhite"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <RadioButton
+                                android:id="@+id/rgId_buRelayNotWorking"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Not Working"
+                                android:textColor="@color/colorwhite"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                        </RadioGroup>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp" />
+
+                        <TextView
+                            android:id="@+id/tvId_oilLeakage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Oil Leakage, if any give details"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/etId_oilLeakage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/orangeColor"
+                            android:hint="Details of oil leakage"
+                            android:inputType="text"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColorHint="@color/colorwhite"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp" />
+
+                        <TextView
+                            android:id="@+id/tvId_tempWinding"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Temperature Meter Winding"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <RadioGroup
+                            android:id="@+id/rgId_tempWinding"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/orangeColor"
+                            android:orientation="vertical">
+
+                            <RadioButton
+                                android:id="@+id/rgId_tempWindingWorking"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Working"
+                                android:textColor="@color/colorwhite"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <RadioButton
+                                android:id="@+id/rgId_tempWindingNotWorking"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Not Working"
+                                android:textColor="@color/colorwhite"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                        </RadioGroup>
+
+                        <TextView
+                            android:id="@+id/tvId_tempOil"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Temperature Meter Oil"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <RadioGroup
+                            android:id="@+id/rgId_tempOil"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/orangeColor"
+                            android:orientation="vertical">
+
+                            <RadioButton
+                                android:id="@+id/rgId_tempOilWorking"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Working"
+                                android:textColor="@color/colorwhite"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <RadioButton
+                                android:id="@+id/rgId_tempOilNotWorking"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Not Working"
+                                android:textColor="@color/colorwhite"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                        </RadioGroup>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp" />
+
+                        <TextView
+                            android:id="@+id/tvId_silicaGel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Silica Gel Status"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <RadioGroup
+                            android:id="@+id/rgId_silicaGel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/orangeColor"
+                            android:orientation="vertical">
+
+                            <RadioButton
+                                android:id="@+id/rgId_silicaGelOk"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Ok"
+                                android:textColor="@color/colorwhite"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <RadioButton
+                                android:id="@+id/rgId_silicaGelNotOk"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Not Ok"
+                                android:textColor="@color/colorwhite"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                        </RadioGroup>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp" />
+
+                        <TextView
+                            android:id="@+id/tvId_resistance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Earth Resistance"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/etId_resistanceNeutral"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@color/orangeColor"
+                                android:focusable="true"
+                                android:fontFamily="sans-serif-light"
+                                android:hint="Neutral"
+                                android:inputType="number"
+                                android:textColor="#000000"
+                                android:textColorHighlight="@color/colorwhite"
+                                android:textColorHint="@color/colorwhite"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/etId_resistanceBody"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@color/orangeColor"
+                                android:focusable="true"
+                                android:fontFamily="sans-serif-light"
+                                android:hint="Body"
+                                android:inputType="number"
+                                android:textColor="#000000"
+                                android:textColorHighlight="@color/colorwhite"
+                                android:textColorHint="@color/colorwhite"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp" />
+
+                        <TextView
+                            android:id="@+id/tvId_htLt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Position of H.T. and L.T. Bush stud"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <RadioGroup
+                            android:id="@+id/rgId_htLt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/orangeColor"
+                            android:orientation="vertical">
+
+                            <RadioButton
+                                android:id="@+id/rgId_htLtOk"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Ok"
+                                android:textColor="@color/colorwhite"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <RadioButton
+                                android:id="@+id/rgId_htLtNotOk"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Not Ok"
+                                android:textColor="@color/colorwhite"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                        </RadioGroup>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp" />
+
+                        <TextView
+                            android:id="@+id/tvId_bushConnect"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Bush Connectors"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <RadioGroup
+                            android:id="@+id/rgId_bushConnect"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/orangeColor"
+                            android:orientation="vertical">
+
+                            <RadioButton
+                                android:id="@+id/rgId_bushConnectOk"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Ok"
+                                android:textColor="@color/colorwhite"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <RadioButton
+                                android:id="@+id/rgId_bushConnectNotOk"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Not Ok"
+                                android:textColor="@color/colorwhite"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                        </RadioGroup>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp" />
+
+                        <TextView
+                            android:id="@+id/tvId_plinthPos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Transformer Plinth Position"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/etId_plinthPos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/orangeColor"
+                            android:orientation="vertical"
+                            android:hint="Transformer plinth position"
+                            android:inputType="text"
+                            android:textSize="20sp"
+                            android:textColorHint="@color/colorwhite">
+
+                        </EditText>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp" />
+
+                        <TextView
+                            android:id="@+id/tvId_earthPitPos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Position of Earth Pit and Connectors"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/etId_earthPitPos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/orangeColor"
+                            android:orientation="vertical"
+                            android:hint="Earth Pit and Connectors"
+                            android:inputType="text"
+                            android:textSize="20sp"
+                            android:textColorHint="@color/colorwhite">
+
+                        </EditText>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp" />
+
+                        <Button
+                            android:id="@+id/btnId_update"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="20dp"
+                            android:background="@drawable/roundbutton"
+                            android:text="Save"
+                            android:textColor="@color/colorwhite"
+                            android:textStyle="bold" />
                     </LinearLayout>
                 </LinearLayout>
             </RelativeLayout>

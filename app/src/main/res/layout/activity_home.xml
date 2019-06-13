@@ -123,34 +123,37 @@
             android:layout_height="180dp"
             android:elevation="10dp"
             android:layout_margin="10dp">
+
             <LinearLayout
+                android:id="@+id/linLayId_powerTrans"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
                 android:background="@color/orangeColor"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="70dp"
-                    android:src="@drawable/form"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:gravity="center"
-                    android:textColor="@color/colorwhite"
-                    android:text="@string/form3"
-                    android:layout_marginTop="10dp"
-                    android:textStyle="bold" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="normal"
-                    android:textColor="@color/colorwhite"
-                    android:text="@string/form3subtitle"
-                    android:gravity="center" />
+                    android:src="@drawable/form" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="@string/form3"
+                    android:textColor="@color/colorwhite"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/form3subtitle"
+                    android:textColor="@color/colorwhite"
+                    android:textStyle="normal" />
 
 
             </LinearLayout>
@@ -165,32 +168,35 @@
             android:layout_height="180dp"
             android:elevation="10dp"
             android:layout_margin="10dp">
+
             <LinearLayout
+                android:id="@+id/linLayId_vcb33kv"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
                 android:background="@color/orangeColor"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="70dp"
-                    android:src="@drawable/form"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorwhite"
-                    android:text="@string/form4"
-                    android:layout_marginTop="10dp"
-                    android:textStyle="bold" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="normal"
-                    android:textColor="@color/colorwhite"
-                    android:text="@string/form4subtitle"
-                    android:gravity="center" />
+                    android:src="@drawable/form" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/form4"
+                    android:textColor="@color/colorwhite"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/form4subtitle"
+                    android:textColor="@color/colorwhite"
+                    android:textStyle="normal" />
 
 
             </LinearLayout>
@@ -214,32 +220,35 @@
             android:layout_height="180dp"
             android:elevation="10dp"
             android:layout_margin="10dp">
+
             <LinearLayout
+                android:id="@+id/linLayId_vcb11kv"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
                 android:background="@color/orangeColor"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="70dp"
-                    android:src="@drawable/form"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorwhite"
-                    android:text="@string/form5"
-                    android:layout_marginTop="10dp"
-                    android:textStyle="bold" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="normal"
-                    android:textColor="@color/colorwhite"
-                    android:text="@string/form5subtitle"
-                    android:gravity="center" />
+                    android:src="@drawable/form" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/form5"
+                    android:textColor="@color/colorwhite"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/form5subtitle"
+                    android:textColor="@color/colorwhite"
+                    android:textStyle="normal" />
 
 
             </LinearLayout>
@@ -307,34 +316,37 @@
             android:layout_width="160dp"
             android:layout_height="180dp"
             android:layout_margin="10dp">
+
             <LinearLayout
+                android:id="@+id/linLayId_material"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
                 android:background="@color/orangeColor"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="70dp"
-                    android:src="@drawable/form"
-                    />
+                    android:src="@drawable/form" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/form7"
+                    android:textColor="@color/colorwhite"
+                    android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/form7"
-                    android:textColor="@color/colorwhite"
-                    android:layout_marginTop="10dp"
-                    android:textStyle="bold" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="normal"
-                    android:textColor="@color/colorwhite"
-
                     android:text="@string/form7subtitle"
-                    android:gravity="center" />
 
+                    android:textColor="@color/colorwhite"
+                    android:textStyle="normal" />
 
 
             </LinearLayout>
@@ -445,33 +457,36 @@
                 android:layout_height="180dp"
                 android:elevation="10dp"
                 android:layout_margin="10dp">
+
                 <LinearLayout
+                    android:id="@+id/linLayId_Meter"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
                     android:background="@color/orangeColor"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="vertical">
+
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="70dp"
-                        android:src="@drawable/form"
-                        />
+                        android:src="@drawable/form" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="@string/form10"
+                        android:textColor="@color/colorwhite"
+                        android:textStyle="bold" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:textColor="@color/colorwhite"
-                        android:text="@string/form10"
-                        android:layout_marginTop="10dp"
-                        android:textStyle="bold" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textStyle="normal"
-                        android:textColor="@color/colorwhite"
                         android:text="@string/form10subtitle"
-                        android:gravity="center" />
-
+                        android:textColor="@color/colorwhite"
+                        android:textStyle="normal" />
 
 
                 </LinearLayout>
@@ -495,34 +510,37 @@
             android:layout_gravity="center"
             android:elevation="10dp"
             android:layout_margin="10dp">
+
             <LinearLayout
+                android:id="@+id/linLayId_genReport"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
                 android:background="@color/orangeColor"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="70dp"
                     android:background="@drawable/iconroval"
-                    android:src="@drawable/ic_print_black_24dp"
-                    />
+                    android:src="@drawable/ic_print_black_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/form11"
+                    android:textColor="@color/colorwhite"
+                    android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/form11"
+                    android:text="Fill general report of PSS"
                     android:textColor="@color/colorwhite"
-                    android:layout_marginTop="10dp"
-                    android:textStyle="bold" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="normal"
-                    android:text="@string/form11subtitle"
-                    android:textColor="@color/colorwhite"
-                    android:gravity="center" />
-
+                    android:textStyle="normal" />
 
 
             </LinearLayout>

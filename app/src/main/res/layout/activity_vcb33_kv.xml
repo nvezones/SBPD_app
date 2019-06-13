@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Forms.PowerTransformer">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rellay1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/grad"
+                android:paddingBottom="20dp">
+
+                <RelativeLayout
+                    android:id="@+id/imgUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="9dp"
+                        android:adjustViewBounds="true"
+                        android:padding="3dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/form" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cus_profile_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgUser"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15sp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/colorwhite"
+                    android:text="Position of 33 KV VCB"
+                    android:textStyle="bold"
+                    android:textSize="32sp" />
+
+                <TextView
+                    android:id="@+id/cus_profile_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cus_profile_name"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="sans-serif"
+                    android:textAllCaps="true"
+                    android:text="Details of Vacuum Circuit Breaker"
+                    android:textColor="@color/colorwhite"
+                    android:textSize="14sp"
+                    android:textAlignment="center"/>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/linlay1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rellay1"
+                android:orientation="horizontal">
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/grad2"
+                android:layout_below="@+id/linlay1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="30dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tvId_nameVcb33kv"
+                            android:text="No. of VCB with name"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="20sp"/>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/etId_nameVcb33kv"
+                            android:background="@color/orangeColor"
+                            android:hint="Enter no. of VCB with name"
+                            android:textColorHint="@color/colorwhite"
+                            android:textColor="@color/colorwhite"
+                            android:textStyle="bold"
+                            android:textSize="20sp"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tvId_posCT"
+                            android:text="Position of CTs"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="20sp"/>
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rgId_posCT"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="20sp"
+                            android:background="@color/orangeColor">
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rgId_posCTWorking"
+                                android:text="Working"
+                                android:textColor="@color/colorwhite"/>
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rgId_posCNotTWorking"
+                                android:text="Not Working"
+                                android:textColor="@color/colorwhite"/>
+                        </RadioGroup>
+
+                        <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="15dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tvId_intrupter"
+                            android:text="Intrupter"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="20sp"/>
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rgId_intrupter"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="20sp"
+                            android:background="@color/orangeColor">
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rgId_intrupterWorking"
+                                android:text="Working"
+                                android:textColor="@color/colorwhite"/>
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rgId_intrupterNotTWorking"
+                                android:text="Not Working"
+                                android:textColor="@color/colorwhite"/>
+                        </RadioGroup>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tvId_mechanism"
+                            android:text="Mechanism"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="20sp"/>
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rgId_mechanism"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="20sp"
+                            android:background="@color/orangeColor">
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rgId_mechanismWorking"
+                                android:text="Working"
+                                android:textColor="@color/colorwhite"/>
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rgId_mechanismNotTWorking"
+                                android:text="Not Working"
+                                android:textColor="@color/colorwhite"/>
+                        </RadioGroup>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tvId_motor"
+                            android:text="Motor"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="20sp"/>
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rgId_motor"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="20sp"
+                            android:background="@color/orangeColor">
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rgId_motorWorking"
+                                android:text="Working"
+                                android:textColor="@color/colorwhite"/>
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rgId_motorNotTWorking"
+                                android:text="Not Working"
+                                android:textColor="@color/colorwhite"/>
+                        </RadioGroup>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tvId_tripCoil"
+                            android:text="Tripping Coil"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="20sp"/>
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rgId_tripCoil"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="20sp"
+                            android:background="@color/orangeColor">
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rgId_tripCoilWorking"
+                                android:text="Working"
+                                android:textColor="@color/colorwhite"/>
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rgId_tripCoilNotTWorking"
+                                android:text="Not Working"
+                                android:textColor="@color/colorwhite"/>
+                        </RadioGroup>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tvId_closeCoil"
+                            android:text="Closing Coil"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="20sp"/>
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rgId_closeCoil"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="20sp"
+                            android:background="@color/orangeColor">
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rgId_closeCoilWorking"
+                                android:text="Working"
+                                android:textColor="@color/colorwhite"/>
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rgId_closeCoilNotTWorking"
+                                android:text="Not Working"
+                                android:textColor="@color/colorwhite"/>
+                        </RadioGroup>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tvId_earthPanel"
+                            android:text="Earthing of Panel"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="20sp"/>
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rgId_earthPanel"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="20sp"
+                            android:background="@color/orangeColor">
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rgId_earthPanelWorking"
+                                android:text="Provided"
+                                android:textColor="@color/colorwhite"/>
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rgId_earthPanelNotTWorking"
+                                android:text="Not Provided"
+                                android:textColor="@color/colorwhite"/>
+                        </RadioGroup>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tvId_relay"
+                            android:text="Relay(O.C.)"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="20sp"/>
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rgId_relay"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="20sp"
+                            android:background="@color/orangeColor">
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rgId_relayWorking"
+                                android:text="Working"
+                                android:textColor="@color/colorwhite"/>
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rgId_relayNotTWorking"
+                                android:text="Defective"
+                                android:textColor="@color/colorwhite"/>
+                        </RadioGroup>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tvId_masterRelay"
+                            android:text="Master Trip Relay"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="20sp"/>
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rgId_masterRelay"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="20sp"
+                            android:background="@color/orangeColor">
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rgId_masterRelayWorking"
+                                android:text="Working"
+                                android:textColor="@color/colorwhite"/>
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rgId_masterRelayNotTWorking"
+                                android:text="Defective"
+                                android:textColor="@color/colorwhite"/>
+                        </RadioGroup>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp" />
+
+                        <TextView
+                            android:id="@+id/tvId_slno"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Serial No."
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/etId_slno"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/orangeColor"
+                            android:focusable="true"
+                            android:fontFamily="sans-serif-light"
+                            android:hint="Enter Serial no."
+                            android:textColor="#000000"
+                            android:textColorHighlight="@color/colorwhite"
+                            android:textColorHint="@color/colorwhite"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp" />
+
+                        <TextView
+                            android:id="@+id/tvId_mfgYear"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Year of Manufacturing"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:typeface="sans" />
+
+                        <EditText
+                            android:id="@+id/etId_mfgYear"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/orangeColor"
+                            android:focusable="true"
+                            android:fontFamily="sans-serif-light"
+                            android:hint="Enter Year of Manufacturing"
+                            android:textColor="#000000"
+                            android:textColorHighlight="@color/colorwhite"
+                            android:textColorHint="@color/colorwhite"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp" />
+
+                        <TextView
+                            android:id="@+id/tvId_make"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Make"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/etId_make"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/orangeColor"
+                            android:focusable="true"
+                            android:fontFamily="sans-serif-light"
+                            android:hint="Make"
+                            android:textColor="#000000"
+                            android:textColorHighlight="@color/colorwhite"
+                            android:textColorHint="@color/colorwhite"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp" />
+
+                        <Button
+                            android:id="@+id/btnId_update"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="20dp"
+                            android:background="@drawable/roundbutton"
+                            android:text="Save"
+                            android:textColor="@color/colorwhite"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

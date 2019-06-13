@@ -114,6 +114,21 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+    <string-array name="NameofMaterials">
+        <item>Fixed Contact</item>
+        <item>Moving Contact</item>
+        <item>Operating Rod</item>
+        <item>Operating Handle</item>
+        <item>Connectors</item>
+    </string-array>
+
+    <string-array name="PT">
+        <item>PT01</item>
+        <item>PT02</item>
+        <item>PT03</item>
+        <item>PT04</item>
+        <item>PT05</item>
+    </string-array>
 
 
 </resources>

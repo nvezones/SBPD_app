@@ -1,13 +1,15 @@
-package com.example.sbpd_app;
+package com.example.sbpd_app.Forms;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class PowerTransformer extends AppCompatActivity {
+import com.example.sbpd_app.R;
+
+public class MaterialsRequired extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_power_transformer);
+        setContentView(R.layout.activity_materials_required);
     }
 }
