@@ -141,6 +141,7 @@
                             android:textStyle="bold"
                             android:textColor="@color/colorwhite"
                             android:textSize="20sp"
+                            android:orientation="horizontal"
                             android:background="@color/orangeColor">
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -178,6 +179,7 @@
                             android:textStyle="bold"
                             android:textColor="@color/colorwhite"
                             android:textSize="20sp"
+                            android:orientation="horizontal"
                             android:background="@color/orangeColor">
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -215,6 +217,7 @@
                             android:textStyle="bold"
                             android:textColor="@color/colorwhite"
                             android:textSize="20sp"
+                            android:orientation="horizontal"
                             android:background="@color/orangeColor">
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -252,6 +255,7 @@
                             android:textStyle="bold"
                             android:textColor="@color/colorwhite"
                             android:textSize="20sp"
+                            android:orientation="horizontal"
                             android:background="@color/orangeColor">
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -289,6 +293,7 @@
                             android:textStyle="bold"
                             android:textColor="@color/colorwhite"
                             android:textSize="20sp"
+                            android:orientation="horizontal"
                             android:background="@color/orangeColor">
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -326,6 +331,7 @@
                             android:textStyle="bold"
                             android:textColor="@color/colorwhite"
                             android:textSize="20sp"
+                            android:orientation="horizontal"
                             android:background="@color/orangeColor">
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -363,6 +369,7 @@
                             android:textStyle="bold"
                             android:textColor="@color/colorwhite"
                             android:textSize="20sp"
+                            android:orientation="horizontal"
                             android:background="@color/orangeColor">
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -400,6 +407,7 @@
                             android:textStyle="bold"
                             android:textColor="@color/colorwhite"
                             android:textSize="20sp"
+                            android:orientation="horizontal"
                             android:background="@color/orangeColor">
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -436,6 +444,7 @@
                             android:id="@+id/rgId_masterRelay"
                             android:textStyle="bold"
                             android:textColor="@color/colorwhite"
+                            android:orientation="horizontal"
                             android:textSize="20sp"
                             android:background="@color/orangeColor">
                             <RadioButton

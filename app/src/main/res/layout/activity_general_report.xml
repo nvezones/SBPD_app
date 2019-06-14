@@ -115,7 +115,7 @@
                             android:layout_marginTop="10dp"
                             android:layout_marginRight="10dp"
                             android:background="@color/orangeColor"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -153,7 +153,7 @@
                             android:layout_marginTop="10dp"
                             android:layout_marginRight="10dp"
                             android:background="@color/orangeColor"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -210,7 +210,7 @@
                                 android:layout_marginTop="10dp"
                                 android:layout_marginRight="10dp"
                                 android:background="@color/orangeColor"
-                                android:orientation="vertical">
+                                android:orientation="horizontal">
 
                                 <RadioButton
                                     android:layout_width="wrap_content"
@@ -220,6 +220,7 @@
                                 <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+
                                     android:text="Not Available" />
 
 
@@ -247,7 +248,7 @@
                                 android:layout_marginTop="10dp"
                                 android:layout_marginRight="10dp"
                                 android:background="@color/orangeColor"
-                                android:orientation="vertical">
+                                android:orientation="horizontal">
 
                                 <RadioButton
                                     android:layout_width="wrap_content"
@@ -255,6 +256,7 @@
                                     android:text="Available" />
 
                                 <RadioButton
+
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Not Available" />
@@ -314,7 +316,7 @@
                                 android:layout_marginTop="10dp"
                                 android:layout_marginRight="10dp"
                                 android:background="@color/orangeColor"
-                                android:orientation="vertical">
+                                android:orientation="horizontal">
 
                                 <RadioButton
                                     android:layout_width="wrap_content"
@@ -323,6 +325,7 @@
 
                                 <RadioButton
                                     android:layout_width="wrap_content"
+
                                     android:layout_height="wrap_content"
                                     android:text="Not Available" />
 
@@ -351,7 +354,7 @@
                                 android:layout_marginTop="10dp"
                                 android:layout_marginRight="10dp"
                                 android:background="@color/orangeColor"
-                                android:orientation="vertical">
+                                android:orientation="horizontal">
 
                                 <RadioButton
                                     android:layout_width="wrap_content"
@@ -361,6 +364,7 @@
                                 <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+
                                     android:text="Not Available" />
 
 
@@ -394,7 +398,7 @@
                             android:layout_marginTop="10dp"
                             android:layout_marginRight="10dp"
                             android:background="@color/orangeColor"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -402,6 +406,7 @@
                                 android:text="Done" />
 
                             <RadioButton
+
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Not Done" />
@@ -455,7 +460,7 @@
                                 android:layout_marginTop="10dp"
                                 android:layout_marginRight="10dp"
                                 android:background="@color/orangeColor"
-                                android:orientation="vertical">
+                                android:orientation="horizontal">
 
                                 <RadioButton
                                     android:layout_width="wrap_content"
@@ -465,6 +470,7 @@
                                 <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+
                                     android:text="Not Available" />
 
 
@@ -492,7 +498,7 @@
                                 android:layout_marginTop="10dp"
                                 android:layout_marginRight="10dp"
                                 android:background="@color/orangeColor"
-                                android:orientation="vertical">
+                                android:orientation="horizontal">
 
                                 <RadioButton
                                     android:layout_width="wrap_content"
@@ -502,6 +508,7 @@
                                 <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+
                                     android:text="Not Available" />
 
 
@@ -537,7 +544,7 @@
                             android:layout_marginTop="10dp"
                             android:layout_marginRight="10dp"
                             android:background="@color/orangeColor"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -547,6 +554,7 @@
                             <RadioButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+
                                 android:text="Not Available" />
 
 
@@ -582,7 +590,7 @@
                             android:layout_marginTop="10dp"
                             android:layout_marginRight="10dp"
                             android:background="@color/orangeColor"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -592,6 +600,7 @@
                             <RadioButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+
                                 android:text="Not Available" />
 
 
@@ -626,7 +635,7 @@
                             android:layout_marginTop="10dp"
                             android:layout_marginRight="10dp"
                             android:background="@color/orangeColor"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -636,6 +645,7 @@
                             <RadioButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+
                                 android:text="Not Available" />
 
 
@@ -672,7 +682,7 @@
                             android:layout_marginTop="10dp"
                             android:layout_marginRight="10dp"
                             android:background="@color/orangeColor"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -682,6 +692,7 @@
                             <RadioButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+
                                 android:text="Not Available" />
 
 
@@ -717,7 +728,7 @@
                             android:layout_marginTop="10dp"
                             android:layout_marginRight="10dp"
                             android:background="@color/orangeColor"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -727,6 +738,7 @@
                             <RadioButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+
                                 android:text="Not Available" />
 
 
@@ -762,7 +774,7 @@
                             android:layout_marginTop="10dp"
                             android:layout_marginRight="10dp"
                             android:background="@color/orangeColor"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -772,6 +784,7 @@
                             <RadioButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+
                                 android:text="Not Available" />
 
 
@@ -808,7 +821,7 @@
                             android:layout_marginTop="10dp"
                             android:layout_marginRight="10dp"
                             android:background="@color/orangeColor"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -818,6 +831,7 @@
                             <RadioButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+
                                 android:text="Not Available" />
 
 
@@ -853,7 +867,7 @@
                             android:layout_marginTop="10dp"
                             android:layout_marginRight="10dp"
                             android:background="@color/orangeColor"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -863,6 +877,7 @@
                             <RadioButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+
                                 android:text="Not Water leakage" />
 
 
@@ -898,7 +913,7 @@
                             android:layout_marginTop="10dp"
                             android:layout_marginRight="10dp"
                             android:background="@color/orangeColor"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -908,6 +923,7 @@
                             <RadioButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+
                                 android:text="Not Ok" />
 
 
@@ -945,7 +961,7 @@
                             android:layout_marginTop="10dp"
                             android:layout_marginRight="10dp"
                             android:background="@color/orangeColor"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -955,6 +971,7 @@
                             <RadioButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+
                                 android:text="Not Ok" />
 
 
@@ -1037,7 +1054,7 @@
                             android:layout_marginTop="10dp"
                             android:layout_marginRight="10dp"
                             android:background="@color/orangeColor"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -1045,6 +1062,7 @@
                                 android:text="Available" />
 
                             <RadioButton
+
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Not Available" />
@@ -1085,7 +1103,7 @@
                             android:layout_marginTop="10dp"
                             android:layout_marginRight="10dp"
                             android:background="@color/orangeColor"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -1093,6 +1111,7 @@
                                 android:text="Yes" />
 
                             <RadioButton
+
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="No" />

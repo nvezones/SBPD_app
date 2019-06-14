@@ -318,7 +318,7 @@
                             android:layout_marginTop="10dp"
                             android:layout_marginRight="10dp"
                             android:background="@color/orangeColor"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/rgId_buRelayWorking"
@@ -387,7 +387,7 @@
                             android:layout_marginTop="10dp"
                             android:layout_marginRight="10dp"
                             android:background="@color/orangeColor"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/rgId_tempWindingWorking"
@@ -425,7 +425,7 @@
                             android:layout_marginTop="10dp"
                             android:layout_marginRight="10dp"
                             android:background="@color/orangeColor"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/rgId_tempOilWorking"
@@ -468,7 +468,7 @@
                             android:layout_marginTop="10dp"
                             android:layout_marginRight="10dp"
                             android:background="@color/orangeColor"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/rgId_silicaGelOk"
@@ -565,7 +565,7 @@
                             android:layout_marginTop="10dp"
                             android:layout_marginRight="10dp"
                             android:background="@color/orangeColor"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/rgId_htLtOk"
@@ -608,7 +608,7 @@
                             android:layout_marginTop="10dp"
                             android:layout_marginRight="10dp"
                             android:background="@color/orangeColor"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/rgId_bushConnectOk"
