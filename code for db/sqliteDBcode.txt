@@ -1,0 +1,157 @@
+CREATE TABLE `GeneralReport` (
+  `ins_id` TEXT,
+  `A` INTEGER,
+  `B` INTEGER,
+  `C1` INTEGER,
+  `C2` INTEGER,
+  `D1` INTEGER,
+  `D2` INTEGER,
+  `E` INTEGER,
+  `F1` INTEGER,
+  `F2` INTEGER,
+  `G` INTEGER,
+  `H` INTEGER,
+  `I` INTEGER,
+  `J` INTEGER,
+  `K` INTEGER,
+  `L` INTEGER,
+  `M` INTEGER,
+  `N` INTEGER,
+  `O` INTEGER,
+  `P` INTEGER,
+  `Q` INTEGER,
+  `R` INTEGER,
+  `S` INTEGER,
+  FOREIGN KEY (`ins_id`) REFERENCES INSPECTION(`ins_id`)
+);
+
+CREATE TABLE `BatteryCharger` (
+  `ins_id` TEXT,
+  `SupplyVoltageAC` INTEGER,
+  `SupplyVoltageDC` INTEGER,
+  `ChargingCurrent` INTEGER,
+  FOREIGN KEY (`ins_id`) REFERENCES INSPECTION(`ins_id`)
+);
+
+CREATE TABLE `Materials` (
+  `ins_id` TEXT,
+  `Name` TEXT,
+  `for33KV` INTEGER,
+  `for11KV` INTEGER,
+  FOREIGN KEY (`ins_id`) REFERENCES INSPECTION(`ins_id`)
+);
+
+CREATE TABLE `Meter` (
+  `ins_id` TEXT,
+  `Total` INTEGER,
+  `Working` INTEGER,
+  `Defective` INTEGER,
+  `Type` INTEGER,
+  FOREIGN KEY (`ins_id`) REFERENCES INSPECTION(`ins_id`)
+);
+
+CREATE TABLE `PSS` (
+  `PSS_id` TEXT,
+  `PSS_name` TEXT,
+  `section_name` TEXT,
+  `sub_division_name` TEXT,
+  `district` TEXT
+  PRIMARY KEY (`PSS_id`)
+);
+
+CREATE TABLE `MeteringUnit` (
+  `ins_id` TEXT,
+  `Total` INTEGER,
+  `Working` INTEGER,
+  `Defective` INTEGER,
+  `Type` INTEGER,
+  FOREIGN KEY (`ins_id`) REFERENCES INSPECTION(`ins_id`)
+);
+
+CREATE TABLE `Battery` (
+  `ins_id` TEXT,
+  `Water_level` INTEGER,
+  `Terminal` INTEGER,
+  `Voltage` INTEGER,
+  `Gravity` INTEGER,
+  FOREIGN KEY (`ins_id`) REFERENCES INSPECTION(`ins_id`)
+);
+
+CREATE TABLE `Isolator` (
+  `ins_id` TEXT,
+  `Total` INTEGER,
+  `Working` INTEGER,
+  `Defective` INTEGER,
+  `Type` INTEGER,
+  FOREIGN KEY (`ins_id`) REFERENCES INSPECTION(`ins_id`)
+);
+
+CREATE TABLE `VCB` (
+  `ins_id` TEXT,
+  `Type` INTEGER,
+  `Name` TEXT,
+  `CT` INTEGER,
+  `Interrupter` INTEGER,
+  `Mechanism` INTEGER,
+  `Motor` INTEGER,
+  `TrippingCoil` INTEGER,
+  `closingCoil` INTEGER,
+  `EarthingPanel` INTEGER,
+  `RelayOC` INTEGER,
+  `MasterTripRelay` INTEGER,
+  `SL_no` TEXT,
+  `MfgYear` DATE,
+  `Make` TEXT,
+  FOREIGN KEY (`ins_id`) REFERENCES INSPECTION(`ins_id`)
+);
+
+CREATE TABLE `PowerTransformer` (
+  `PSS_id` TEXT,
+  `ins_id` TEXT,
+  `PT_id` TEXT,
+  `SL_no` TEXT,
+  `MfgYear` DATE,
+  `OilLevel` TEXT,
+  `BDVTop` TEXT,
+  `BDVBottom` TEXT,
+  `BuchholzRelay` INTEGER,
+  `OilLeakage` TEXT,
+  `TempMeterWinding` INTEGER,
+  `TempMeterOil` INTEGER,
+  `SilicaGel` INTEGER,
+  `EarthResistNeutral` INTEGER,
+  `EarthResistBody` INTEGER,
+  `HTBrush` INTEGER,
+  `LTBrush` INTEGER,
+  `BrushConnectors` INTEGER,
+  `Plinth` TEXT,
+  `EarthPit&connector` TEXT,
+  PRIMARY KEY (`PSS_id`, `PT_id`),
+  FOREIGN KEY (`PSS_id`) REFERENCES PSS(`PSS_id`),
+  FOREIGN KEY (`ins_id`) REFERENCES INSPECTION(`ins_id`)
+);
+
+CREATE TABLE `LA` (
+  `ins_id` TEXT,
+  `Total` INTEGER,
+  `Working` INTEGER,
+  `Defective` INTEGER,
+  `Required` INTEGER,
+  `Type` INTEGER,
+   FOREIGN KEY (`ins_id`) REFERENCES INSPECTION(`ins_id`)
+);
+
+CREATE TABLE `INSPECTION`
+    `ins_id` TEXT PRIMARY KEY,
+    `user_id` TEXT,
+    `PSS_id` TEXT,
+    `date` DATE,
+    FOREIGN KEY (`PSS_id`) REFERENCES PSS(`PSS_id`)
+);
+
+CREATE TABLE `SYNC_DETAILS`
+    `ins_id` TEXT,
+    `isSynced`  INTEGER,
+    `syncTime`  TIMESTAMP,
+    FOREIGN KEY (`ins_id`) REFERENCES INSPECTION(`ins_id`)
+);
