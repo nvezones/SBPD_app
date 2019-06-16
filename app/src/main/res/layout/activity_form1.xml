@@ -128,34 +128,6 @@
 
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <Button
-                            android:id="@+id/btnimgfrm1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="left"
-                            android:layout_marginTop="20dp"
-                            android:background="@drawable/roundbutton"
-                            android:gravity="center"
-                            android:padding="10dp"
-                            android:text="Upload Picture Of PSS"
-                            android:textColor="@color/colorwhite"
-                            android:textStyle="bold" />
-
-                        <ImageView
-
-                            android:id="@+id/frm1img"
-                            android:layout_width="180dp"
-                            android:layout_height="180dp"
-                            android:layout_marginTop="10dp"
-                            />
-
-
-                    </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"

@@ -24,7 +24,15 @@
     <string name="form11">General Report</string>
     <string name="form11subtitle">Please fill the General Report</string>
     <string name="title_activity_power_transformer">PowerTransformer</string>
-    <string name="large_text">
+    <string name="large_text"></string>
+        <string name="attachment">Photo attachment</string>
+        <string name="attachmentsubtitle">Please attach all the necessary photos</string>
+
+    <string-array name="Photo">
+        <item>Photo of PSS</item>
+        <item>Photo of Terminal</item>
+    </string-array>
+
         "Material is the metaphor.\n\n"
 
         "A material metaphor is the unifying theory of a rationalized space and a system of motion."
@@ -112,7 +120,6 @@
         "On the layout level, design your app layout to minimize opportunities for interference. "
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
-    </string>
     <string name="action_settings">Settings</string>
     <string-array name="NameofMaterials">
         <item>Fixed Contact</item>
@@ -129,6 +136,9 @@
         <item>PT04</item>
         <item>PT05</item>
     </string-array>
+
+
+
 
 
 </resources>

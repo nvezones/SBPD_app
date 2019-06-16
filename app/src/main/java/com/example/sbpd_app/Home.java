@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.example.sbpd_app.Forms.Form1;
 import com.example.sbpd_app.Forms.GeneralReport;
 import com.example.sbpd_app.Forms.MaterialsRequired;
+import com.example.sbpd_app.Forms.PhotoAttactment;
 import com.example.sbpd_app.Forms.PositionBattery;
 import com.example.sbpd_app.Forms.PositionOfIsolator;
 import com.example.sbpd_app.Forms.PowerTransformer;
@@ -24,7 +25,7 @@ public class Home extends AppCompatActivity {
 
     private long backpresstime;
     Toast toastback;
-    LinearLayout form1,isofrm,statuskvla,statuskvmeter,powertrans,material,vcb33,vcb11,genReport,meter;
+    LinearLayout form1,isofrm,statuskvla,statuskvmeter,powertrans,material,vcb33,vcb11,genReport,meter,photoattachment;
     CardView cardView,cardView1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +42,13 @@ public class Home extends AppCompatActivity {
         vcb11=(LinearLayout)findViewById(R.id.linLayId_vcb11kv);
         genReport=(LinearLayout)findViewById(R.id.linLayId_genReport);
         meter=(LinearLayout)findViewById(R.id.linLayId_Meter);
+        photoattachment=(LinearLayout)findViewById(R.id.photoattachment);
+        photoattachment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), PhotoAttactment.class));
+            }
+        });
         form1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
