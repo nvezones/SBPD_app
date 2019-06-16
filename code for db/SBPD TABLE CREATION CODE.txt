@@ -1,0 +1,141 @@
+CREATE TABLE `GeneralReport` (
+  `PSS_id` varchar(50),
+  `A` Boolean,
+  `B` Boolean,
+  `C1` Boolean,
+  `C2` Boolean,
+  `D1` Boolean,
+  `D2` Boolean,
+  `E` Boolean,
+  `F1` Boolean,
+  `F2` Boolean,
+  `G` Boolean,
+  `H` Boolean,
+  `I` Boolean,
+  `J` Boolean,
+  `K` Boolean,
+  `L` Boolean,
+  `M` Boolean,
+  `N` Boolean,
+  `O` Boolean,
+  `P` Boolean,
+  `Q` Boolean,
+  `R` Boolean,
+  `S` Boolean,
+  FOREIGN KEY (`PSS_id`) REFERENCES PSS(`PSS_id`)
+);
+
+CREATE TABLE `BatteryCharger` (
+  `PSS_id` varchar(50),
+  `SupplyVoltageAC` INT(5),
+  `SupplyVoltageDC` INT(5),
+  `ChargingCurrent` INT(5),
+  FOREIGN KEY (`PSS_id`) REFERENCES PSS(`PSS_id`)
+);
+
+CREATE TABLE `Materials` (
+  `PSS_id` varchar(50),
+  `Name` varchar(50),
+  `for33KV` INT(5),
+  `for11KV` INT(5),
+  FOREIGN KEY (`PSS_id`) REFERENCES PSS(`PSS_id`)
+);
+
+CREATE TABLE `Meter` (
+  `PSS_id` varchar(50),
+  `Total` INT(5),
+  `Working` INT(5),
+  `Defective` INT(5),
+  `Type` Boolean,
+  FOREIGN KEY (`PSS_id`) REFERENCES PSS(`PSS_id`)
+);
+
+CREATE TABLE `PSS` (
+  `PSS_id` varchar(50),
+  `PSS_name` varchar(50),
+  `section_name` varchar(50),
+  `sub_division_name` varchar(50),
+  PRIMARY KEY (`PSS_id`)
+);
+
+CREATE TABLE `MeteringUnit` (
+  `PSS_id` varchar(50),
+  `Total` INT(5),
+  `Working` INT(5),
+  `Defective` INT(5),
+  `Type` Boolean,
+  FOREIGN KEY (`PSS_id`) REFERENCES PSS(`PSS_id`)
+);
+
+CREATE TABLE `Battery` (
+  `PSS_id` varchar(50),
+  `Water_level` Boolean,
+  `Terminal` Boolean,
+  `Voltage` INT(5),
+  `Gravity` INT(5),
+  FOREIGN KEY (`PSS_id`) REFERENCES PSS(`PSS_id`)
+);
+
+CREATE TABLE `Isolator` (
+  `PSS_id` varchar(50),
+  `Total` INT(5),
+  `Working` INT(5),
+  `Defective` INT(5),
+  `Type` Boolean,
+  FOREIGN KEY (`PSS_id`) REFERENCES PSS(`PSS_id`)
+);
+
+CREATE TABLE `VCB` (
+  `PSS_id` varchar(50),
+  `Type` Boolean,
+  `Name` varchar(50),
+  `CT` INT(5),
+  `Interrupter` Boolean,
+  `Mechanism` Boolean,
+  `Motor` Boolean,
+  `TrippingCoil` Boolean,
+  `closingCoil` Boolean,
+  `EarthingPanel` Boolean,
+  `RelayOC` Boolean,
+  `MasterTripRelay` Boolean,
+  `SL_no` varchar(50),
+  `MfgYear` DATE,
+  `Make` varchar(50),
+  FOREIGN KEY (`PSS_id`) REFERENCES PSS(`PSS_id`)
+);
+
+CREATE TABLE `PowerTransformer` (
+  `PSS_id` varchar(50),
+  `PT_id` varchar(50),
+  `SL_no` varchar(50),
+  `MfgYear` DATE,
+  `OilLevel` varchar(50),
+  `BDVTop` varchar(50),
+  `BDVBottom` varchar(50),
+  `BuchholzRelay` Boolean,
+  `OilLeakage` TINYTEXT,
+  `TempMeterWinding` INT(5),
+  `TempMeterOil` INT(5),
+  `SilicaGel` Boolean,
+  `EarthResistNeutral` INT(5),
+  `EarthResistBody` INT(5),
+  `HTBrush` Boolean,
+  `LTBrush` Boolean,
+  `BrushConnectors` Boolean,
+  `Plinth` varchar(50),
+  `EarthPit&connector` varchar(50),
+  PRIMARY KEY (`PSS_id`, `PT_id`)
+);
+
+CREATE TABLE `LA` (
+  `PSS_id` varchar(50),
+  `Total` INT(5),
+  `Working` INT(5),
+  `Defective` INT(5),
+  `Required` INT(5),
+  `Type` Boolean,
+  FOREIGN KEY (`PSS_id`) REFERENCES PSS(`PSS_id`)
+);
+
+
+
