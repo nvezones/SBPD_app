@@ -54,6 +54,7 @@ public class PhotoAttactment extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 dispatchTakePictureIntent();
+                startActivity(new Intent(PhotoAttactment.this,GeneralReport.class));
             }
         });
     }
@@ -108,5 +109,9 @@ public class PhotoAttactment extends AppCompatActivity {
         return image;
     }
 
-
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(PhotoAttactment.this,com.example.sbpd_app.Home.class));
+    }
 }

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Forms.PowerTransformer">
+    tools:context=".Forms.MaterialsRequired">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -138,7 +138,8 @@
                             android:hint="For repairable 33KV isolators"
                             android:textSize="20sp"
                             android:textColor="@color/colorwhite"
-                            android:textColorHint="@color/colorwhite"/>
+                            android:textColorHint="@color/colorwhite"
+                            android:inputType="number"/>
 
                         <View
                             android:layout_width="match_parent"
@@ -153,7 +154,9 @@
                             android:hint="For repairable 11KV isolators"
                             android:backgroundTint="@color/orangeColor"
                             android:textColorHint="@color/colorwhite"
-                            android:textSize="20sp"/>
+                            android:textSize="20sp"
+                            android:textColor="@color/colorwhite"
+                            android:inputType="number"/>
 
                         <View
                             android:layout_width="match_parent"
@@ -161,15 +164,28 @@
                             android:layout_marginTop="15dp" />
 
                         <Button
-                            android:id="@+id/cus_profile_update"
+                            android:id="@+id/btnId_save"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_margin="20dp"
                             android:background="@drawable/roundbutton"
-                            android:text="Save "
+                            android:text="Save and Select next material"
                             android:textColor="@color/colorwhite"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:onClick="saveMaterials"/>
+
+                        <Button
+                            android:id="@+id/btnId_next"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="20dp"
+                            android:background="@drawable/roundbutton"
+                            android:onClick="goToNextMenu"
+                            android:text="Go to Next Menu"
+                            android:textColor="@color/colorwhite"
+                            android:textStyle="bold" /> />
                     </LinearLayout>
                 </LinearLayout>
             </RelativeLayout>

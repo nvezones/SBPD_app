@@ -117,15 +117,17 @@
                         android:background="@color/orangeColor"
                         android:orientation="horizontal">
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Full" />
+                            <RadioButton
+                                android:id="@+id/rgId_waterFull"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Full" />
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Not Full" />
+                            <RadioButton
+                                android:id="@+id/rgId_waterNFull"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Not Full" />
 
 
                     </RadioGroup>
@@ -154,11 +156,13 @@
                             android:orientation="horizontal">
 
                             <RadioButton
+                                android:id="@+id/rgId_termOk"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Ok" />
 
                             <RadioButton
+                                android:id="@+id/termNOk"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Not Ok" />
@@ -191,7 +195,7 @@
                             android:textStyle="bold" />
 
                         <EditText
-                            android:inputType="numberDecimal"
+                            android:id="@+id/etId_voltage"
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
                             android:layout_marginTop="10dp"
@@ -200,6 +204,7 @@
                             android:focusable="true"
                             android:fontFamily="sans-serif-light"
                             android:hint="Enter Voltage Reading"
+                            android:inputType="number"
                             android:textColor="#000000"
                             android:textColorHighlight="@color/colorwhite"
                             android:textColorHint="@color/colorwhite"
@@ -228,6 +233,7 @@
                             android:textStyle="bold" />
 
                         <EditText
+                            android:id="@+id/etId_Gravity"
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
                             android:layout_marginTop="10dp"
@@ -236,6 +242,7 @@
                             android:focusable="true"
                             android:fontFamily="sans-serif-light"
                             android:hint="Enter Gravity"
+                            android:inputType="number"
                             android:textColor="#000000"
                             android:textColorHighlight="@color/colorwhite"
                             android:textColorHint="@color/colorwhite"
@@ -251,14 +258,16 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
+
                             <TextView
+                                android:id="@+id/tvId_batcharge"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:textSize="24sp"
-                                android:id="@+id/tvId_batcharge"
+                                android:layout_marginTop="15dp"
                                 android:text="Position of Battery Charger"
                                 android:textColor="@color/colorwhite"
-                                android:textStyle="bold"/>
+                                android:textSize="32sp"
+                                android:textStyle="bold" />
 
                             <View
                                 android:layout_width="match_parent"
@@ -289,6 +298,7 @@
                                 android:focusable="true"
                                 android:fontFamily="sans-serif-light"
                                 android:hint="AC voltage"
+                                android:inputType="number"
                                 android:textColor="#000000"
                                 android:textColorHighlight="@color/colorwhite"
                                 android:textColorHint="@color/colorwhite"
@@ -305,6 +315,7 @@
                                 android:focusable="true"
                                 android:fontFamily="sans-serif-light"
                                 android:hint="DC voltage"
+                                android:inputType="number"
                                 android:textColor="#000000"
                                 android:textColorHighlight="@color/colorwhite"
                                 android:textColorHint="@color/colorwhite"
@@ -340,23 +351,24 @@
                                 android:focusable="true"
                                 android:fontFamily="sans-serif-light"
                                 android:hint="Charging Current (in Amp)"
+                                android:inputType="number"
                                 android:textColor="#000000"
                                 android:textColorHighlight="@color/colorwhite"
                                 android:textColorHint="@color/colorwhite"
                                 android:textSize="18sp"
-                                android:textStyle="bold"
-                                android:inputType="number"/>
+                                android:textStyle="bold" />
                         </LinearLayout>
                     </LinearLayout>
 
 
                     <Button
-                        android:id="@+id/cus_profile_update"
+                        android:id="@+id/btnId_save"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_margin="20dp"
                         android:background="@drawable/roundbutton"
+                        android:onClick="setSavePosBatt"
                         android:text="Save "
                         android:textColor="@color/colorwhite"
                         android:textStyle="bold" />

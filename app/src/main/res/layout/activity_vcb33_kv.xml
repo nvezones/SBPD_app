@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Forms.PowerTransformer">
+    tools:context=".Forms.VCB33KV">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -568,7 +568,8 @@
                             android:background="@drawable/roundbutton"
                             android:text="Save"
                             android:textColor="@color/colorwhite"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:onClick="setSaveVCB33"/>
                     </LinearLayout>
                 </LinearLayout>
             </RelativeLayout>

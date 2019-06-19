@@ -49,10 +49,10 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15sp"
                     android:fontFamily="sans-serif-light"
-                    android:textColor="@color/colorwhite"
                     android:text="@string/form8"
-                    android:textStyle="bold"
-                    android:textSize="25sp" />
+                    android:textColor="@color/colorwhite"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/cus_profile_address"
@@ -61,8 +61,8 @@
                     android:layout_below="@+id/cus_profile_name"
                     android:layout_centerHorizontal="true"
                     android:fontFamily="sans-serif"
-                    android:textAllCaps="true"
                     android:text="@string/form8subtitle"
+                    android:textAllCaps="true"
                     android:textColor="@color/colorwhite"
                     android:textSize="14sp" />
 
@@ -83,8 +83,8 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/grad2"
-                android:layout_below="@+id/linlay1">
+                android:layout_below="@+id/linlay1"
+                android:background="@drawable/grad2">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -105,23 +105,24 @@
                             android:layout_height="wrap_content"
                             android:text="Number of 33KV L.A"
                             android:textColor="@color/colorwhite"
-                            android:textStyle="bold"
-                            android:textSize="20sp" />
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
 
                         <EditText
-                            android:inputType="number"
-                            android:layout_marginTop="10dp"
-                            android:textColorHint="@color/colorwhite"
-                            android:textStyle="bold"
-                            android:layout_marginRight="10dp"
-                            android:focusable="true"
-                            android:background="@color/orangeColor"
+                            android:id="@+id/etId_LA33total"
                             android:layout_width="match_parent"
-                            android:textColorHighlight="@color/colorwhite"
                             android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/orangeColor"
+                            android:focusable="true"
                             android:fontFamily="sans-serif-light"
+                            android:inputType="number"
                             android:textColor="#000000"
-                            android:textSize="18sp" />
+                            android:textColorHighlight="@color/colorwhite"
+                            android:textColorHint="@color/colorwhite"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
                         <View
                             android:layout_width="match_parent"
@@ -141,30 +142,30 @@
                             android:layout_height="wrap_content"
                             android:text="Number of Working 33KV L.A"
                             android:textColor="@color/colorwhite"
-                            android:textStyle="bold"
-                            android:textSize="20sp" />
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
 
                         <EditText
-                            android:inputType="number"
-                            android:layout_marginTop="10dp"
-                            android:textColorHint="@color/colorwhite"
-                            android:hint=""
-                            android:textStyle="bold"
-                            android:layout_marginRight="10dp"
-                            android:focusable="true"
-                            android:background="@color/orangeColor"
+                            android:id="@+id/etId_LA33working"
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/orangeColor"
+                            android:focusable="true"
                             android:fontFamily="sans-serif-light"
-                            android:textColorHighlight="@color/colorwhite"
+                            android:hint=""
+                            android:inputType="number"
                             android:textColor="#000000"
-                            android:textSize="18sp" />
+                            android:textColorHighlight="@color/colorwhite"
+                            android:textColorHint="@color/colorwhite"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:layout_marginTop="15dp"
-                            />
+                            android:layout_marginTop="15dp" />
 
                     </LinearLayout>
 
@@ -179,32 +180,31 @@
                             android:layout_height="wrap_content"
                             android:text="Number of defective 33KV L.A"
                             android:textColor="@color/colorwhite"
-                            android:textStyle="bold"
-                            android:textSize="20sp" />
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
 
                         <EditText
-                            android:inputType="number"
-                            android:layout_marginTop="10dp"
-                            android:textColorHint="@color/colorwhite"
-                            android:textStyle="bold"
-                            android:textColorHighlight="@color/colorwhite"
-                            android:layout_marginRight="10dp"
-                            android:focusable="true"
-                            android:background="@color/orangeColor"
+                            android:id="@+id/etId_LA33defect"
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/orangeColor"
+                            android:focusable="true"
                             android:fontFamily="sans-serif-light"
+                            android:inputType="number"
                             android:textColor="#000000"
-                            android:textSize="18sp" />
+                            android:textColorHighlight="@color/colorwhite"
+                            android:textColorHint="@color/colorwhite"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:layout_marginTop="15dp"
-                            />
+                            android:layout_marginTop="15dp" />
 
                     </LinearLayout>
-
 
 
                     <LinearLayout
@@ -218,29 +218,29 @@
                             android:layout_height="wrap_content"
                             android:text="Number of 33KV L.A required"
                             android:textColor="@color/colorwhite"
-                            android:textStyle="bold"
-                            android:textSize="20sp" />
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
 
                         <EditText
-                            android:inputType="number"
-                            android:layout_marginTop="10dp"
-                            android:textColorHint="@color/colorwhite"
-                            android:textStyle="bold"
-                            android:textColorHighlight="@color/colorwhite"
-                            android:layout_marginRight="10dp"
-                            android:focusable="true"
-                            android:background="@color/orangeColor"
+                            android:id="@+id/etId_LA33req"
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/orangeColor"
+                            android:focusable="true"
                             android:fontFamily="sans-serif-light"
+                            android:inputType="number"
                             android:textColor="#000000"
-                            android:textSize="18sp" />
+                            android:textColorHighlight="@color/colorwhite"
+                            android:textColorHint="@color/colorwhite"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:layout_marginTop="15dp"
-                            />
+                            android:layout_marginTop="15dp" />
 
                     </LinearLayout>
 
@@ -256,32 +256,31 @@
                             android:layout_height="wrap_content"
                             android:text="Number of  11KV L.A"
                             android:textColor="@color/colorwhite"
-                            android:textStyle="bold"
-                            android:textSize="20sp" />
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
 
                         <EditText
-                            android:inputType="number"
-                            android:layout_marginTop="10dp"
-                            android:textColorHint="@color/colorwhite"
-                            android:textStyle="bold"
-                            android:textColorHighlight="@color/colorwhite"
-                            android:layout_marginRight="10dp"
-                            android:focusable="true"
-                            android:background="@color/orangeColor"
+                            android:id="@+id/etId_LA11total"
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/orangeColor"
+                            android:focusable="true"
                             android:fontFamily="sans-serif-light"
+                            android:inputType="number"
                             android:textColor="#000000"
-                            android:textSize="18sp" />
+                            android:textColorHighlight="@color/colorwhite"
+                            android:textColorHint="@color/colorwhite"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:layout_marginTop="15dp"
-                            />
+                            android:layout_marginTop="15dp" />
 
                     </LinearLayout>
-
 
 
                     <LinearLayout
@@ -295,29 +294,29 @@
                             android:layout_height="wrap_content"
                             android:text="Number of Working 11KV L.A"
                             android:textColor="@color/colorwhite"
-                            android:textStyle="bold"
-                            android:textSize="20sp" />
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
 
                         <EditText
-                            android:inputType="number"
-                            android:layout_marginTop="10dp"
-                            android:textColorHint="@color/colorwhite"
-                            android:textStyle="bold"
-                            android:textColorHighlight="@color/colorwhite"
-                            android:layout_marginRight="10dp"
-                            android:focusable="true"
-                            android:background="@color/orangeColor"
+                            android:id="@+id/etId_LA11working"
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/orangeColor"
+                            android:focusable="true"
                             android:fontFamily="sans-serif-light"
+                            android:inputType="number"
                             android:textColor="#000000"
-                            android:textSize="18sp" />
+                            android:textColorHighlight="@color/colorwhite"
+                            android:textColorHint="@color/colorwhite"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:layout_marginTop="15dp"
-                            />
+                            android:layout_marginTop="15dp" />
 
                     </LinearLayout>
 
@@ -333,29 +332,29 @@
                             android:layout_height="wrap_content"
                             android:text="Number of Non-Working  11KV L.A"
                             android:textColor="@color/colorwhite"
-                            android:textStyle="bold"
-                            android:textSize="20sp" />
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
 
                         <EditText
-                            android:inputType="number"
-                            android:layout_marginTop="10dp"
-                            android:textColorHint="@color/colorwhite"
-                            android:textStyle="bold"
-                            android:textColorHighlight="@color/colorwhite"
-                            android:layout_marginRight="10dp"
-                            android:focusable="true"
-                            android:background="@color/orangeColor"
+                            android:id="@+id/etId_LA11defect"
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/orangeColor"
+                            android:focusable="true"
                             android:fontFamily="sans-serif-light"
+                            android:inputType="number"
                             android:textColor="#000000"
-                            android:textSize="18sp" />
+                            android:textColorHighlight="@color/colorwhite"
+                            android:textColorHint="@color/colorwhite"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:layout_marginTop="15dp"
-                            />
+                            android:layout_marginTop="15dp" />
 
                     </LinearLayout>
 
@@ -371,29 +370,29 @@
                             android:layout_height="wrap_content"
                             android:text="Number of  11KV L.A required"
                             android:textColor="@color/colorwhite"
-                            android:textStyle="bold"
-                            android:textSize="20sp" />
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
 
                         <EditText
-                            android:inputType="number"
-                            android:layout_marginTop="10dp"
-                            android:textColorHint="@color/colorwhite"
-                            android:textStyle="bold"
-                            android:textColorHighlight="@color/colorwhite"
-                            android:layout_marginRight="10dp"
-                            android:focusable="true"
-                            android:background="@color/orangeColor"
+                            android:id="@+id/etId_LA11req"
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/orangeColor"
+                            android:focusable="true"
                             android:fontFamily="sans-serif-light"
+                            android:inputType="number"
                             android:textColor="#000000"
-                            android:textSize="18sp" />
+                            android:textColorHighlight="@color/colorwhite"
+                            android:textColorHint="@color/colorwhite"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:layout_marginTop="15dp"
-                            />
+                            android:layout_marginTop="15dp" />
 
                     </LinearLayout>
 
@@ -409,48 +408,49 @@
                             android:layout_height="wrap_content"
                             android:text="Remark"
                             android:textColor="@color/colorwhite"
-                            android:textStyle="bold"
-                            android:textSize="20sp" />
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
 
                         <EditText
-                            android:inputType="textMultiLine"
-                            android:lines="8"
-                            android:gravity="top|left"
-                            android:minLines="6"
-                            android:maxLines="10"
-                            android:scrollbars="vertical"
-                            android:layout_marginTop="10dp"
-                            android:textColorHint="@color/colorwhite"
-                            android:textStyle="bold"
-                            android:textColorHighlight="@color/colorwhite"
-                            android:layout_marginRight="10dp"
-                            android:focusable="true"
-                            android:background="@color/orangeColor"
+                            android:id="@+id/etId_LAremarks"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/orangeColor"
+                            android:focusable="true"
                             android:fontFamily="sans-serif-light"
+                            android:gravity="top|left"
+                            android:inputType="textMultiLine"
+                            android:lines="8"
+                            android:maxLines="10"
+                            android:minLines="6"
+                            android:scrollbars="vertical"
                             android:textColor="#000000"
-                            android:textSize="18sp" />
+                            android:textColorHighlight="@color/colorwhite"
+                            android:textColorHint="@color/colorwhite"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:layout_marginTop="15dp"
-                            />
+                            android:layout_marginTop="15dp" />
 
                     </LinearLayout>
 
 
                     <Button
-                        android:textColor="@color/colorwhite"
-                        android:layout_gravity="center"
-                        android:background="@drawable/roundbutton"
-                        android:id="@+id/cus_profile_update"
+                        android:id="@+id/btnId_save"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:layout_margin="20dp"
-                        android:textStyle="bold"
-                        android:text="Save " />
+                        android:background="@drawable/roundbutton"
+                        android:onClick="setSaveLA"
+                        android:text="Save "
+                        android:textColor="@color/colorwhite"
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>
@@ -458,15 +458,10 @@
             </RelativeLayout>
 
 
-
-
-
-
         </LinearLayout>
 
 
     </ScrollView>
-
 
 
 </LinearLayout>

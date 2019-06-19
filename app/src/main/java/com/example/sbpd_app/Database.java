@@ -94,7 +94,7 @@ public class Database {
                     "  `Total` INTEGER, " +
                     "  `Working` INTEGER, " +
                     "  `Defective` INTEGER, " +
-                    "  `Type` INTEGER, " +
+                    "  `Type` TEXT, " +
                     "  FOREIGN KEY (`ins_id`) REFERENCES INSPECTION(`ins_id`));";
             db.execSQL(tblMeter);
             
@@ -103,7 +103,7 @@ public class Database {
                     "  `Total` INTEGER, " +
                     "  `Working` INTEGER, " +
                     "  `Defective` INTEGER, " +
-                    "  `Type` INTEGER, " +
+                    "  `Type` TEXT, " +
                     "  FOREIGN KEY (`ins_id`) REFERENCES INSPECTION(`ins_id`));";
             db.execSQL(tblMeteringUnit);
             
@@ -121,13 +121,13 @@ public class Database {
                     "  `Total` INTEGER, " +
                     "  `Working` INTEGER, " +
                     "  `Defective` INTEGER, " +
-                    "  `Type` INTEGER, " +
+                    "  `Type` TEXT, " +
                     "  FOREIGN KEY (`ins_id`) REFERENCES INSPECTION(`ins_id`));";
             db.execSQL(tblIsolator);
             
             tblVCB="CREATE TABLE `VCB` ( " +
                     "  `ins_id` TEXT, " +
-                    "  `Type` INTEGER, " +
+                    "  `Type` TEXT, " +
                     "  `Name` TEXT, " +
                     "  `CT` INTEGER, " +
                     "  `Interrupter` INTEGER, " +
@@ -139,7 +139,7 @@ public class Database {
                     "  `RelayOC` INTEGER, " +
                     "  `MasterTripRelay` INTEGER, " +
                     "  `SL_no` TEXT, " +
-                    "  `MfgYear` DATE, " +
+                    "  `MfgYear` TEXT, " +
                     "  `Make` TEXT, " +
                     "  FOREIGN KEY (`ins_id`) REFERENCES INSPECTION(`ins_id`));";
             db.execSQL(tblVCB);
@@ -176,7 +176,8 @@ public class Database {
                     "  `Working` INTEGER, " +
                     "  `Defective` INTEGER, " +
                     "  `Required` INTEGER, " +
-                    "  `Type` INTEGER, " +
+                    "  `Remarks TEXT`, "+
+                    "  `Type` TEXT, " +
                     "   FOREIGN KEY (`ins_id`) REFERENCES INSPECTION(`ins_id`));";
             db.execSQL(tblLA);
             
@@ -207,9 +208,9 @@ public class Database {
         ourHelper.close();
     }
 
-    public void saveForm1(String value[],String table)
+    public void saveForm1(String value[])      //PSS Table insertion
     {
-        String sql = "INSERT INTO " +table+ " VALUES (?,?,?,?)";
+        String sql = "INSERT INTO `PSS` VALUES (?,?,?,?)";
         SQLiteStatement statement = ourDatabase.compileStatement(sql);
         statement.bindAllArgsAsStrings(value);
         try {
@@ -217,6 +218,188 @@ public class Database {
             Log.w("insert success","Insert success");
         } catch (SQLiteException e) {
             Log.w("insert fail",e.getMessage());
+        }
+    }
+
+    public void savePositionBattery(String value[])      //Position of Battery Table insertion
+    {
+        String sql = "INSERT INTO `Battery` VALUES (?,?,?,?,?)";
+        SQLiteStatement statement = ourDatabase.compileStatement(sql);
+        statement.bindString(1,"ins123");
+        for(int i=0;i<4;i++)
+        {
+            statement.bindString(i+2,value[i]);
+        }
+        try {
+            long rowId = statement.executeInsert();
+            Log.w("insert success","Insert success");
+        } catch (SQLiteException e) {
+            Log.w("insert fail",e.getMessage());
+        }
+    }
+
+    public void savePositionBatteryCharger(Integer value[])      //Position of Battery Charger Table insertion
+    {
+        String sql = "INSERT INTO `BatteryCharger` VALUES (?,?,?,?)";
+        SQLiteStatement statement = ourDatabase.compileStatement(sql);
+        statement.bindString(1,"ins123");
+        for(int i=0;i<3;i++)
+        {
+            statement.bindLong(i+2,value[i]);
+        }
+        try {
+            long rowId = statement.executeInsert();
+            Log.w("insert success","Insert success");
+        } catch (SQLiteException e) {
+            Log.w("insert fail",e.getMessage());
+        }
+    }
+
+    public void saveVCB(String value[],String type)      //VCB Table insertion
+    {
+        String sql = "INSERT INTO `VCB` VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        SQLiteStatement statement = ourDatabase.compileStatement(sql);
+        statement.bindString(1,"1ns123");
+        statement.bindString(2,type);
+        for(int i=0;i<13;i++)
+        {
+            statement.bindString(i+3,value[i]);
+        }
+        try {
+            long rowId = statement.executeInsert();
+            Log.w("insert success","Insert success");
+        } catch (SQLiteException e) {
+            Log.w("insert fail",e.getMessage());
+        }
+    }
+
+    public void savePowerTransformer(String value[])      //Power Transformer table insertion
+    {
+        String sql = "INSERT INTO `PowerTransformer` VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        SQLiteStatement statement=ourDatabase.compileStatement(sql);
+        statement.bindString(1,"pss123");
+        statement.bindString(2,"ins123");
+
+        for(int i=0;i<18;i++)
+            statement.bindString(i+3,value[i]);
+
+        try {
+            long rowId=statement.executeInsert();
+            Log.w("insert success","Insert success");
+        } catch (SQLiteException e) {
+            Log.w("insert fail",e.getMessage());
+        }
+    }
+
+    public void saveIsolator(Integer value[], String type)
+    {
+        String sql="INSERT INTO `Isolator` VALUES (?,?,?,?,?)";
+        SQLiteStatement statement=ourDatabase.compileStatement(sql);
+        statement.bindString(1,"ins123");
+        for(int i=0;i<3;i++)
+            statement.bindLong(i+2,value[i]);
+        statement.bindString(5,type);
+
+        try{
+            long rowId=statement.executeInsert();
+            Log.w("insert success","Insert success");
+        } catch (SQLiteException e) {
+            Log.w("insert fail",e.getMessage());
+        }
+    }
+
+    public void saveMaterialsReq(String value[])
+    {
+        String sql="INSERT INTO `Materials` VALUES (?,?,?,?)";
+        SQLiteStatement statement=ourDatabase.compileStatement(sql);
+        statement.bindString(1,"ins123");
+        statement.bindString(2,value[0]);
+        int for33=0,for11=0;
+        try{
+            for33=Integer.parseInt(value[1]);
+            for11=Integer.parseInt(value[2]);
+        }catch (NumberFormatException e)
+        {
+            for33=-1;
+            for11=-1;
+        }finally {
+            statement.bindLong(3,for33);
+            statement.bindLong(4,for11);
+        }
+
+        try{
+            long rowId=statement.executeInsert();
+            Log.w("insert success","Insert success");
+        } catch (SQLiteException e) {
+            Log.w("insert fail",e.getMessage());
+        }
+    }
+
+    public void saveLA(Integer value[],String type,String remarks)
+    {
+        String sql="INSERT INTO `LA` VALUES (?,?,?,?,?,?,?)";
+        SQLiteStatement statement=ourDatabase.compileStatement(sql);
+        statement.bindString(1,"ins123");
+        for(int i=0;i<4;i++)
+            statement.bindLong(i+2,value[i]);
+        statement.bindString(6,remarks);
+        statement.bindString(7,type);
+
+        try{
+            long rowId=statement.executeInsert();
+            Log.w("insert success","Insert success");
+        } catch (SQLiteException e) {
+            Log.w("insert fail",e.getMessage());
+        }
+    }
+
+    public void saveMetering(Integer value[],String type)
+    {
+        String sql="INSERT INTO `MeteringUnit` VALUES (?,?,?,?,?)";
+        SQLiteStatement statement=ourDatabase.compileStatement(sql);
+        statement.bindString(1,"ins123");
+        for(int i=0;i<3;i++)
+            statement.bindLong(i+2,value[i]);
+        statement.bindString(5,type);
+
+        try{
+            long rowId=statement.executeInsert();
+            Log.w("insert success","Insert success");
+        } catch (SQLiteException e) {
+            Log.w("insert fail",e.getMessage());
+        }
+    }
+
+    public void saveMeter(Integer value[],String type)
+    {
+        String sql="INSERT INTO `MeteringUnit` VALUES (?,?,?,?,?)";
+        SQLiteStatement statement=ourDatabase.compileStatement(sql);
+        statement.bindString(1,"ins123");
+        for(int i=0;i<3;i++)
+            statement.bindLong(i+2,value[i]);
+        statement.bindString(5,type);
+
+        try{
+            long rowId=statement.executeInsert();
+            Log.w("insert success","Insert success");
+        } catch (SQLiteException e) {
+            Log.w("insert fail",e.getMessage());
+        }
+    }
+
+    public void saveGeneralReport(Integer value[])
+    {
+        String sql="INSERT INTO `MeteringUnit` VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        SQLiteStatement statement=ourDatabase.compileStatement(sql);
+        statement.bindString(1,"ins123");
+        for(int i=0;i<22;i++)
+            statement.bindLong(i+2,value[i]);
+
+        try{
+            long rowId=statement.executeInsert();
+            Log.w("insert success","Insert success");
+        } catch (SQLiteException e) {
+            Log.w("insert fail", e.getMessage());
         }
     }
 }

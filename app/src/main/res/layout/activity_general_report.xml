@@ -110,6 +110,7 @@
                             android:textStyle="bold" />
 
                         <RadioGroup
+                            android:id="@+id/rgId_lighting"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -118,11 +119,13 @@
                             android:orientation="horizontal">
 
                             <RadioButton
+                                android:id="@+id/rgId_lightingAvl"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Available" />
 
                             <RadioButton
+                                android:id="@+id/rgId_lightingNvl"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Not Available" />
@@ -148,6 +151,7 @@
                             android:textStyle="bold" />
 
                         <RadioGroup
+                            android:id="@+id/rgId_ltCtrl"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -156,11 +160,13 @@
                             android:orientation="horizontal">
 
                             <RadioButton
+                                android:id="@+id/rgId_ltCtrlAvl"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Available" />
 
                             <RadioButton
+                                android:id="@+id/rgId_ltCtrlNvl"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Not Available" />
@@ -205,6 +211,7 @@
                                 android:textStyle="bold" />
 
                             <RadioGroup
+                                android:id="@+id/rgId_ToiletG"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="10dp"
@@ -213,14 +220,16 @@
                                 android:orientation="horizontal">
 
                                 <RadioButton
+                                    android:id="@+id/rgId_ToiletGAvl"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Available" />
 
                                 <RadioButton
+                                    android:id="@+id/rgId_ToiletGNvl"
                                     android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
 
+                                    android:layout_height="wrap_content"
                                     android:text="Not Available" />
 
 
@@ -243,6 +252,7 @@
                                 android:textStyle="bold" />
 
                             <RadioGroup
+                                android:id="@+id/rgId_ToiletL"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="10dp"
@@ -251,12 +261,14 @@
                                 android:orientation="horizontal">
 
                                 <RadioButton
+                                    android:id="@+id/rgId_ToiletLAvl"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Available" />
 
                                 <RadioButton
 
+                                    android:id="@+id/rgId_ToiletLNvl"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Not Available" />
@@ -311,6 +323,7 @@
                                 android:textStyle="bold" />
 
                             <RadioGroup
+                                android:id="@+id/rgId_Furn"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="10dp"
@@ -319,13 +332,15 @@
                                 android:orientation="horizontal">
 
                                 <RadioButton
+                                    android:id="@+id/rgId_FurnAvl"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Available" />
 
                                 <RadioButton
-                                    android:layout_width="wrap_content"
+                                    android:id="@+id/rgId_FurnNvl"
 
+                                    android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Not Available" />
 
@@ -349,6 +364,7 @@
                                 android:textStyle="bold" />
 
                             <RadioGroup
+                                android:id="@+id/rgId_Fan"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="10dp"
@@ -357,14 +373,16 @@
                                 android:orientation="horizontal">
 
                                 <RadioButton
+                                    android:id="@+id/rgId_FanAvl"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Available" />
 
                                 <RadioButton
+                                    android:id="@+id/rgId_FanNvl"
                                     android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
 
+                                    android:layout_height="wrap_content"
                                     android:text="Not Available" />
 
 
@@ -393,6 +411,7 @@
                             android:textStyle="bold" />
 
                         <RadioGroup
+                            android:id="@+id/rgId_Grass"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -401,12 +420,14 @@
                             android:orientation="horizontal">
 
                             <RadioButton
+                                android:id="@+id/rgId_GrassDone"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Done" />
 
                             <RadioButton
 
+                                android:id="@+id/rgId_GrassNDone"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Not Done" />
@@ -455,6 +476,7 @@
                                 android:textStyle="bold" />
 
                             <RadioGroup
+                                android:id="@+id/rgId_Tap"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="10dp"
@@ -463,14 +485,16 @@
                                 android:orientation="horizontal">
 
                                 <RadioButton
+                                    android:id="@+id/rgId_TapAvl"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Available" />
 
                                 <RadioButton
+                                    android:id="@+id/rgId_TapNvl"
                                     android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
 
+                                    android:layout_height="wrap_content"
                                     android:text="Not Available" />
 
 
@@ -493,6 +517,7 @@
                                 android:textStyle="bold" />
 
                             <RadioGroup
+                                android:id="@+id/rgId_RO"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="10dp"
@@ -501,14 +526,16 @@
                                 android:orientation="horizontal">
 
                                 <RadioButton
+                                    android:id="@+id/rgId_ROAvl"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Available" />
 
                                 <RadioButton
+                                    android:id="@+id/rgId_RONvl"
                                     android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
 
+                                    android:layout_height="wrap_content"
                                     android:text="Not Available" />
 
 
@@ -539,6 +566,7 @@
                             android:textStyle="bold" />
 
                         <RadioGroup
+                            android:id="@+id/rgId_Tools"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -547,14 +575,16 @@
                             android:orientation="horizontal">
 
                             <RadioButton
+                                android:id="@+id/rgId_ToolsAvl"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Available" />
 
                             <RadioButton
+                                android:id="@+id/rgId_ToolsNvl"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
 
+                                android:layout_height="wrap_content"
                                 android:text="Not Available" />
 
 
@@ -585,6 +615,7 @@
                             android:textStyle="bold" />
 
                         <RadioGroup
+                            android:id="@+id/rgId_Gloves"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -593,14 +624,16 @@
                             android:orientation="horizontal">
 
                             <RadioButton
+                                android:id="@+id/rgId_GlovesAvl"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Available" />
 
                             <RadioButton
+                                android:id="@+id/rgId_GlovesNvl"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
 
+                                android:layout_height="wrap_content"
                                 android:text="Not Available" />
 
 
@@ -630,6 +663,7 @@
                             android:textStyle="bold" />
 
                         <RadioGroup
+                            android:id="@+id/rgId_Gum"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -638,14 +672,16 @@
                             android:orientation="horizontal">
 
                             <RadioButton
+                                android:id="@+id/rgId_GumAvl"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Available" />
 
                             <RadioButton
+                                android:id="@+id/rgId_GumNvl"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
 
+                                android:layout_height="wrap_content"
                                 android:text="Not Available" />
 
 
@@ -677,6 +713,7 @@
                             android:textStyle="bold" />
 
                         <RadioGroup
+                            android:id="@+id/rgId_Rain"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -685,14 +722,16 @@
                             android:orientation="horizontal">
 
                             <RadioButton
+                                android:id="@+id/rgId_RainAvl"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Available" />
 
                             <RadioButton
+                                android:id="@+id/rgId_RainNvl"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
 
+                                android:layout_height="wrap_content"
                                 android:text="Not Available" />
 
 
@@ -723,6 +762,7 @@
                             android:textStyle="bold" />
 
                         <RadioGroup
+                            android:id="@+id/rgId_Fire"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -731,14 +771,16 @@
                             android:orientation="horizontal">
 
                             <RadioButton
+                                android:id="@+id/rgId_FireAvl"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Available" />
 
                             <RadioButton
+                                android:id="@+id/rgId_FireNvl"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
 
+                                android:layout_height="wrap_content"
                                 android:text="Not Available" />
 
 
@@ -769,6 +811,7 @@
                             android:textStyle="bold" />
 
                         <RadioGroup
+                            android:id="@+id/rgId_Discharge"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -777,14 +820,16 @@
                             android:orientation="horizontal">
 
                             <RadioButton
+                                android:id="@+id/rgId_DischargeAvl"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Available" />
 
                             <RadioButton
+                                android:id="@+id/rgId_DischargeNvl"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
 
+                                android:layout_height="wrap_content"
                                 android:text="Not Available" />
 
 
@@ -816,6 +861,7 @@
                             android:textStyle="bold" />
 
                         <RadioGroup
+                            android:id="@+id/rgId_Firstaid"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -824,14 +870,16 @@
                             android:orientation="horizontal">
 
                             <RadioButton
+                                android:id="@+id/rgId_FirstaidAvl"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Available" />
 
                             <RadioButton
+                                android:id="@+id/rgId_FirstaidNvl"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
 
+                                android:layout_height="wrap_content"
                                 android:text="Not Available" />
 
 
@@ -862,6 +910,7 @@
                             android:textStyle="bold" />
 
                         <RadioGroup
+                            android:id="@+id/rgId_roof"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -870,14 +919,16 @@
                             android:orientation="horizontal">
 
                             <RadioButton
+                                android:id="@+id/rgId_roofLeak"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Water leakage" />
 
                             <RadioButton
+                                android:id="@+id/rgId_roofNLeak"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
 
+                                android:layout_height="wrap_content"
                                 android:text="Not Water leakage" />
 
 
@@ -908,6 +959,7 @@
                             android:textStyle="bold" />
 
                         <RadioGroup
+                            android:id="@+id/rgId_wall"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -916,14 +968,16 @@
                             android:orientation="horizontal">
 
                             <RadioButton
+                                android:id="@+id/rgId_wallOk"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Ok" />
 
                             <RadioButton
+                                android:id="@+id/rgId_wallNOk"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
 
+                                android:layout_height="wrap_content"
                                 android:text="Not Ok" />
 
 
@@ -956,6 +1010,7 @@
                             android:textStyle="bold" />
 
                         <RadioGroup
+                            android:id="@+id/rgId_gate"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -964,14 +1019,16 @@
                             android:orientation="horizontal">
 
                             <RadioButton
+                                android:id="@+id/rgId_gateOk"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Ok" />
 
                             <RadioButton
+                                android:id="@+id/rgId_gateNOk"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
 
+                                android:layout_height="wrap_content"
                                 android:text="Not Ok" />
 
 
@@ -1002,7 +1059,7 @@
                             android:textStyle="bold" />
 
                         <EditText
-                            android:inputType="number"
+                            android:id="@+id/etId_manpower"
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
                             android:layout_marginTop="10dp"
@@ -1010,6 +1067,7 @@
                             android:background="@color/orangeColor"
                             android:focusable="true"
                             android:fontFamily="sans-serif-light"
+                            android:inputType="number"
                             android:textColor="#000000"
                             android:textColorHighlight="@color/colorwhite"
                             android:textColorHint="@color/colorwhite"
@@ -1049,6 +1107,7 @@
                             android:textStyle="bold" />
 
                         <RadioGroup
+                            android:id="@+id/rgId_register"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -1057,12 +1116,14 @@
                             android:orientation="horizontal">
 
                             <RadioButton
+                                android:id="@+id/rgId_registerAvl"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Available" />
 
                             <RadioButton
 
+                                android:id="@+id/rgId_registerNvl"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Not Available" />
@@ -1098,6 +1159,7 @@
                             android:textStyle="bold" />
 
                         <RadioGroup
+                            android:id="@+id/rgId_Log"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -1106,12 +1168,14 @@
                             android:orientation="horizontal">
 
                             <RadioButton
+                                android:id="@+id/rgId_LogYes"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Yes" />
 
                             <RadioButton
 
+                                android:id="@+id/rgId_LogNo"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="No" />
@@ -1121,14 +1185,14 @@
                     </LinearLayout>
 
 
-
                     <Button
-                        android:id="@+id/cus_profile_update"
+                        android:id="@+id/btnId_save"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_margin="20dp"
                         android:background="@drawable/roundbutton"
+                        android:onClick="setSaveGenRep"
                         android:text="Save "
                         android:textColor="@color/colorwhite"
                         android:textStyle="bold" />

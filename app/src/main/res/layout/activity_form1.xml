@@ -48,7 +48,7 @@
                     android:layout_marginTop="15sp"
                     android:fontFamily="sans-serif-light"
                     android:textColor="@color/colorwhite"
-                    android:text="Form"
+                    android:text="Power Sub-Station"
                     android:textStyle="bold"
                     android:textSize="32sp" />
 
@@ -60,7 +60,7 @@
                     android:layout_centerHorizontal="true"
                     android:fontFamily="sans-serif"
                     android:textAllCaps="true"
-                    android:text="Intial Verification Form"
+                    android:text="Select the PSS for inspection"
                     android:textColor="@color/colorwhite"
                     android:textSize="14sp" />
 
@@ -101,25 +101,27 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Name of PSS"
+                            android:text="District"
                             android:textColor="@color/colorwhite"
                             android:textStyle="bold"
                             android:textSize="20sp" />
 
-                        <EditText
-                            android:layout_marginTop="10dp"
-                            android:textColorHint="@color/colorwhite"
-                            android:hint="Enter Pss"
-                            android:textStyle="bold"
-                            android:layout_marginRight="10dp"
-                            android:focusable="true"
-                            android:background="@color/orangeColor"
+                        <Spinner
+                            android:id="@+id/spId_dist"
                             android:layout_width="match_parent"
-                            android:textColorHighlight="@color/colorwhite"
                             android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/orangeColor"
+                            android:entries="@array/district"
+                            android:focusable="true"
                             android:fontFamily="sans-serif-light"
+                            android:hint="Choose District"
                             android:textColor="#000000"
-                            android:textSize="18sp" />
+                            android:textColorHighlight="@color/colorwhite"
+                            android:textColorHint="@color/colorwhite"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
                         <View
                             android:layout_width="match_parent"
@@ -138,25 +140,27 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Name of Section"
+                            android:text="Sub-Division"
                             android:textColor="@color/colorwhite"
                             android:textStyle="bold"
                             android:textSize="20sp" />
 
-                        <EditText
-                            android:layout_marginTop="10dp"
-                            android:textColorHint="@color/colorwhite"
-                            android:hint="Enter Section Name"
-                            android:textStyle="bold"
-                            android:layout_marginRight="10dp"
-                            android:focusable="true"
-                            android:background="@color/orangeColor"
+                        <Spinner
+                            android:id="@+id/spId_subDiv"
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/orangeColor"
+                            android:entries="@array/subDiv"
+                            android:focusable="true"
                             android:fontFamily="sans-serif-light"
-                            android:textColorHighlight="@color/colorwhite"
+                            android:hint="Choose Sub-Division"
                             android:textColor="#000000"
-                            android:textSize="18sp" />
+                            android:textColorHighlight="@color/colorwhite"
+                            android:textColorHint="@color/colorwhite"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
                         <View
                             android:layout_width="match_parent"
@@ -175,25 +179,27 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Name of Sub Division"
+                            android:text="Section"
                             android:textColor="@color/colorwhite"
                             android:textStyle="bold"
                             android:textSize="20sp" />
 
-                        <EditText
-                            android:layout_marginTop="10dp"
-                            android:textColorHint="@color/colorwhite"
-                            android:hint="Enter Sub Division"
-                            android:textStyle="bold"
-                            android:textColorHighlight="@color/colorwhite"
-                            android:layout_marginRight="10dp"
-                            android:focusable="true"
-                            android:background="@color/orangeColor"
+                        <Spinner
+                            android:id="@+id/spId_section"
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/orangeColor"
+                            android:entries="@array/section"
+                            android:focusable="true"
                             android:fontFamily="sans-serif-light"
+                            android:hint="Choose Section"
                             android:textColor="#000000"
-                            android:textSize="18sp" />
+                            android:textColorHighlight="@color/colorwhite"
+                            android:textColorHint="@color/colorwhite"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
                         <View
                             android:layout_width="match_parent"
@@ -203,19 +209,96 @@
 
                     </LinearLayout>
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical">
 
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Name of PSS"
+                            android:textColor="@color/colorwhite"
+                            android:textStyle="bold"
+                            android:textSize="20sp" />
+
+                        <Spinner
+                            android:id="@+id/spId_pssName"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/orangeColor"
+                            android:entries="@array/pssName"
+                            android:focusable="true"
+                            android:fontFamily="sans-serif-light"
+                            android:hint="Choose PSS"
+                            android:textColor="#000000"
+                            android:textColorHighlight="@color/colorwhite"
+                            android:textColorHint="@color/colorwhite"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="PSS id"
+                            android:textColor="@color/colorwhite"
+                            android:textStyle="bold"
+                            android:textSize="20sp" />
+
+                        <Spinner
+                            android:id="@+id/spId_pssId"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/orangeColor"
+                            android:clickable="false"
+                            android:entries="@array/pssid"
+                            android:focusable="true"
+                            android:fontFamily="sans-serif-light"
+                            android:hint="Choose PSS"
+                            android:textColor="#000000"
+                            android:textColorHighlight="@color/colorwhite"
+                            android:textColorHint="@color/colorwhite"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp"
+                            />
+
+                    </LinearLayout>
 
 
                     <Button
-                        android:textColor="@color/colorwhite"
-                        android:layout_gravity="center"
-                        android:background="@drawable/roundbutton"
-                        android:id="@+id/cus_profile_update"
+                        android:id="@+id/btnId_save"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:layout_margin="20dp"
-                        android:textStyle="bold"
-                        android:text="Save " />
+                        android:background="@drawable/roundbutton"
+                        android:text="Save "
+                        android:textColor="@color/colorwhite"
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>

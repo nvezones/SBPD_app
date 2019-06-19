@@ -110,19 +110,20 @@
                             android:textSize="20sp" />
 
                         <EditText
-                            android:inputType="number"
-                            android:layout_marginTop="10dp"
-                            android:textColorHint="@color/colorwhite"
-                            android:textStyle="bold"
-                            android:layout_marginRight="10dp"
-                            android:focusable="true"
-                            android:background="@color/orangeColor"
+                            android:id="@+id/etId_isoTotal33"
                             android:layout_width="match_parent"
-                            android:textColorHighlight="@color/colorwhite"
                             android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/orangeColor"
+                            android:focusable="true"
                             android:fontFamily="sans-serif-light"
+                            android:inputType="number"
                             android:textColor="#000000"
-                            android:textSize="18sp" />
+                            android:textColorHighlight="@color/colorwhite"
+                            android:textColorHint="@color/colorwhite"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
                         <View
                             android:layout_width="match_parent"
@@ -146,20 +147,21 @@
                             android:textSize="20sp" />
 
                         <EditText
-                            android:inputType="number"
-                            android:layout_marginTop="10dp"
-                            android:textColorHint="@color/colorwhite"
-                            android:hint=""
-                            android:textStyle="bold"
-                            android:layout_marginRight="10dp"
-                            android:focusable="true"
-                            android:background="@color/orangeColor"
+                            android:id="@+id/etId_isoWorking33"
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/orangeColor"
+                            android:focusable="true"
                             android:fontFamily="sans-serif-light"
-                            android:textColorHighlight="@color/colorwhite"
+                            android:hint=""
+                            android:inputType="number"
                             android:textColor="#000000"
-                            android:textSize="18sp" />
+                            android:textColorHighlight="@color/colorwhite"
+                            android:textColorHint="@color/colorwhite"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
                         <View
                             android:layout_width="match_parent"
@@ -178,25 +180,26 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Number of defective 33KV Isolators"
+                            android:text="Number. of defective 33KV Isolators"
                             android:textColor="@color/colorwhite"
-                            android:textStyle="bold"
-                            android:textSize="20sp" />
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
 
                         <EditText
-                            android:inputType="number"
-                            android:layout_marginTop="10dp"
-                            android:textColorHint="@color/colorwhite"
-                            android:textStyle="bold"
-                            android:textColorHighlight="@color/colorwhite"
-                            android:layout_marginRight="10dp"
-                            android:focusable="true"
-                            android:background="@color/orangeColor"
+                            android:id="@+id/etId_isoDefect33"
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/orangeColor"
+                            android:focusable="true"
                             android:fontFamily="sans-serif-light"
+                            android:inputType="number"
                             android:textColor="#000000"
-                            android:textSize="18sp" />
+                            android:textColorHighlight="@color/colorwhite"
+                            android:textColorHint="@color/colorwhite"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
                         <View
                             android:layout_width="match_parent"
@@ -223,19 +226,20 @@
                             android:textSize="20sp" />
 
                         <EditText
-                            android:inputType="number"
-                            android:layout_marginTop="10dp"
-                            android:textColorHint="@color/colorwhite"
-                            android:textStyle="bold"
-                            android:textColorHighlight="@color/colorwhite"
-                            android:layout_marginRight="10dp"
-                            android:focusable="true"
-                            android:background="@color/orangeColor"
+                            android:id="@+id/etId_isoWorking11"
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/orangeColor"
+                            android:focusable="true"
                             android:fontFamily="sans-serif-light"
+                            android:inputType="number"
                             android:textColor="#000000"
-                            android:textSize="18sp" />
+                            android:textColorHighlight="@color/colorwhite"
+                            android:textColorHint="@color/colorwhite"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
                         <View
                             android:layout_width="match_parent"
@@ -253,27 +257,29 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tvDefect"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Number of defective 11KV Isolators"
                             android:textColor="@color/colorwhite"
-                            android:textStyle="bold"
-                            android:textSize="20sp" />
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
 
                         <EditText
-                            android:inputType="number"
-                            android:layout_marginTop="10dp"
-                            android:textColorHint="@color/colorwhite"
-                            android:textStyle="bold"
-                            android:textColorHighlight="@color/colorwhite"
-                            android:layout_marginRight="10dp"
-                            android:focusable="true"
-                            android:background="@color/orangeColor"
+                            android:id="@+id/etId_isoDefect11"
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/orangeColor"
+                            android:focusable="true"
                             android:fontFamily="sans-serif-light"
+                            android:inputType="number"
                             android:textColor="#000000"
-                            android:textSize="18sp" />
+                            android:textColorHighlight="@color/colorwhite"
+                            android:textColorHint="@color/colorwhite"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
                         <View
                             android:layout_width="match_parent"
@@ -284,18 +290,17 @@
                     </LinearLayout>
 
 
-
-
                     <Button
-                        android:textColor="@color/colorwhite"
-                        android:layout_gravity="center"
-                        android:background="@drawable/roundbutton"
-                        android:id="@+id/cus_profile_update"
+                        android:id="@+id/btnId_save"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:layout_margin="20dp"
-                        android:textStyle="bold"
-                        android:text="Save " />
+                        android:background="@drawable/roundbutton"
+                        android:onClick="setSaveIso"
+                        android:text="Save "
+                        android:textColor="@color/colorwhite"
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>
