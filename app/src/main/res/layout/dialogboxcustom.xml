@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/grad">
+
+    <EditText
+        android:id="@+id/otpcodetext"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/orangeColor"
+        android:hint="Enter otp"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/verifybtn"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_alignParentLeft="true"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundbuttonblue"
+        android:text="Enter"/>
+
+
+        <Button
+            android:id="@+id/cancelbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/roundbuttonblue"
+            android:text="Cancel" />
+    </RelativeLayout>
+
+
+
+</LinearLayout>

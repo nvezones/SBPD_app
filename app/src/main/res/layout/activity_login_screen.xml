@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/grad"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Forms.LoginScreen">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/iconroval"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_person_black_24dp"
+        android:id="@+id/imageicon"/>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/imageicon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@color/orangeColor"
+        android:hint="Name"
+        />
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@color/orangeColor"
+        android:inputType="textPassword"
+        android:layout_below="@id/editText"
+        android:layout_centerHorizontal="true"
+        android:hint="Password"
+        android:id="@+id/editpassword"
+        android:layout_marginTop="20dp"
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@id/editpassword"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:text="Remember Me"
+        android:textStyle="bold"
+        android:id="@+id/checkboxrmember"
+        android:textColor="@color/colorwhite"
+        />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/checkboxrmember"
+        android:layout_centerHorizontal="true"
+        android:shadowRadius="2"
+        android:background="@drawable/roundbuttonblue"
+        android:text="Login"
+        android:textColor="@color/colorwhite"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:id="@+id/loginbtn"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loginbtn"
+        android:text="Not a Memember? Signup Now"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:id="@+id/signuptextview"/>
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+
