@@ -19,6 +19,8 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Forms.PhotoAttactment"></activity>
         <activity android:name=".Forms.VCB11KV" />
+        <activity android:name=".Forms.RegistrationScreen"/>
+        <activity android:name=".Forms.LoginScreen" />
         <activity android:name=".Forms.VCB33KV" />
         <activity android:name=".Forms.MaterialsRequired" />
         <activity android:name=".Forms.StatuOfKv" />

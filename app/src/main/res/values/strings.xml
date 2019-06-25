@@ -27,6 +27,8 @@
     <string name="large_text"></string>
         <string name="attachment">Photo attachment</string>
         <string name="attachmentsubtitle">Please attach all the necessary photos</string>
+    <string name="registration">Registration Form</string>
+    <string name="registrationsubtitle">Please fill the form to Register</string>
 
     <string-array name="Photo">
         <item>Photo of PSS</item>

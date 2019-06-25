@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.sbpd_app.Forms.LoginScreen;
+
 public class MainActivity extends AppCompatActivity {
 
     ImageView imageView;
@@ -37,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 finally {
-                    startActivity(new Intent(getApplicationContext(),Home.class));
+                    startActivity(new Intent(getApplicationContext(), LoginScreen.class));
                     finish();
                 }
             }
