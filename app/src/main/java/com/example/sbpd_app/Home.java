@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -25,6 +26,7 @@ public class Home extends AppCompatActivity {
 
     LinearLayout form1,isofrm,statuskvla,statuskvmeter,powertrans,material,vcb33,vcb11,genReport,meter,photoattachment;
     CardView cardView,cardView1;
+    Button mainMenu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +43,7 @@ public class Home extends AppCompatActivity {
         genReport=(LinearLayout)findViewById(R.id.linLayId_genReport);
         meter=(LinearLayout)findViewById(R.id.linLayId_Meter);
         photoattachment=(LinearLayout)findViewById(R.id.photoattachment);
+        mainMenu=(Button)findViewById(R.id.btnId_gotomenu);
         photoattachment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -119,6 +122,10 @@ public class Home extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), StatusOfMeter.class));
             }
         });
+    }
+    public void goToMainMenu(View view)
+    {
+        startActivity(new Intent(getApplicationContext(),MenuScreen.class));
     }
 
 

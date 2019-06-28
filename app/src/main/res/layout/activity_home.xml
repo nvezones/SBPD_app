@@ -601,13 +601,17 @@
 
         </LinearLayout>
 
-
-
-
-
-
-
-
+        <Button
+            android:id="@+id/btnId_gotomenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:background="@drawable/roundbutton"
+            android:onClick="goToMainMenu"
+            android:text="Go to Main Menu"
+            android:textColor="@color/colorwhite"
+            android:textStyle="bold" /> />
 
 
     </LinearLayout>

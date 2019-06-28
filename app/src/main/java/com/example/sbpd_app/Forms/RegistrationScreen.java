@@ -2,6 +2,7 @@ package com.example.sbpd_app.Forms;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -37,6 +38,8 @@ public class RegistrationScreen extends AppCompatActivity {
     Dialog dialog;
     Button diabtn,cancelbtn;
     EditText otpcode;
+    SharedPreferences preferences;
+    SharedPreferences.Editor editor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +48,8 @@ public class RegistrationScreen extends AppCompatActivity {
         phone=(EditText)findViewById(R.id.phoneuser);
         password=(EditText)findViewById(R.id.passworduser);
         button=(Button)findViewById(R.id.signupbtn);
+        preferences=getApplicationContext().getSharedPreferences("loginId",0);
+        editor=preferences.edit();
         FirebaseApp.initializeApp(getApplicationContext());
         firebaseAuth=FirebaseAuth.getInstance();
         firebaseAuthSettings=firebaseAuth.getFirebaseAuthSettings();
@@ -53,6 +58,7 @@ public class RegistrationScreen extends AppCompatActivity {
         otpcode=(EditText)dialog.findViewById(R.id.otpcodetext);
         diabtn=(Button)dialog.findViewById(R.id.verifybtn);
         cancelbtn=(Button)dialog.findViewById(R.id.cancelbtn);
+
 
 
 
@@ -124,7 +130,10 @@ public class RegistrationScreen extends AppCompatActivity {
 
                             if(otpcode.getText().toString().equals(phoneAuthCredential.getSmsCode()))
                             {
-                                Intent intent=new Intent(getApplicationContext(),Home.class);
+                                editor.putString("userid",id.getText().toString().trim());
+                                editor.putString("password",password.getText().toString().trim());
+                                editor.commit();
+                                Intent intent=new Intent(getApplicationContext(),LoginScreen.class);
                                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK);
                                 startActivity(intent);
                             }

@@ -30,7 +30,8 @@
         <activity android:name=".Forms.PositionBattery" />
         <activity android:name=".Forms.StatusOfMetering" />
         <activity android:name=".Forms.Form1" />
-        <activity android:name=".Home" />
+        <activity android:name=".Home"
+            android:noHistory="true"/>
         <activity android:name=".Forms.PowerTransformer" />
         <activity android:name=".Forms.StatusOfMeter" />
         <activity android:name=".Forms.GeneralReport" />

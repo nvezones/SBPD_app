@@ -28,21 +28,21 @@
         android:id="@+id/imageicon"/>
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/loginid"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_below="@id/imageicon"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:background="@color/orangeColor"
-        android:hint="Name"
+        android:hint="Login Id"
         />
     <EditText
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="@color/orangeColor"
         android:inputType="textPassword"
-        android:layout_below="@id/editText"
+        android:layout_below="@id/loginid"
         android:layout_centerHorizontal="true"
         android:hint="Password"
         android:id="@+id/editpassword"
