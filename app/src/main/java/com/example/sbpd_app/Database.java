@@ -1,6 +1,7 @@
 package com.example.sbpd_app;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
@@ -33,14 +34,17 @@ public class Database {
         public void onCreate(SQLiteDatabase db) {
             String tblPSS,tblGeneralReport,tblBatteryCharger,tblMaterials,tblMeter;
             String tblMeteringUnit,tblBattery,tblIsolator,tblVCB,tblPowerTransformer,tblLA,tblInspection, tblSync_details;
+
             tblPSS="CREATE TABLE `PSS` ("+
-                        "`PSS_id` varchar(50), "+
-                        "`PSS_name` varchar(50), "+
-                        "`section_name` varchar(50), "+
-                        "`sub_division_name` varchar(50), "+
+                        "`PSS_id` TEXT, "+
+                        "`PSS_name` TEXT, "+
+                        "`section_name`TEXT, "+
+                        "`sub_division_name` TEXT, "+
+                        "`District` TEXT, "+
+                        "`numPT` INTEGER, "+
                         "PRIMARY KEY (`PSS_id`));" ;
             db.execSQL(tblPSS);
-            
+            //db.savePSS();
             tblInspection="CREATE TABLE `INSPECTION` (`ins_id` TEXT PRIMARY KEY, `user_id` TEXT,`PSS_id` TEXT,`date` DATE,\n" +
                     "FOREIGN KEY (`PSS_id`) REFERENCES PSS(`PSS_id`)\n" +
                     ");";
@@ -208,11 +212,12 @@ public class Database {
         ourHelper.close();
     }
 
-    public void saveForm1(String value[])      //PSS Table insertion
+    public void savePSS(String value[])      //PSS Table insertion
     {
         String sql = "INSERT INTO `PSS` VALUES (?,?,?,?)";
         SQLiteStatement statement = ourDatabase.compileStatement(sql);
         statement.bindAllArgsAsStrings(value);
+
         try {
             long rowId = statement.executeInsert();
             Log.w("insert success","Insert success");
@@ -372,7 +377,7 @@ public class Database {
 
     public void saveMeter(Integer value[],String type)
     {
-        String sql="INSERT INTO `MeteringUnit` VALUES (?,?,?,?,?)";
+        String sql="INSERT INTO `Meter` VALUES (?,?,?,?,?)";
         SQLiteStatement statement=ourDatabase.compileStatement(sql);
         statement.bindString(1,"ins123");
         for(int i=0;i<3;i++)
@@ -389,7 +394,7 @@ public class Database {
 
     public void saveGeneralReport(Integer value[])
     {
-        String sql="INSERT INTO `MeteringUnit` VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        String sql="INSERT INTO `GeneralReport` VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         SQLiteStatement statement=ourDatabase.compileStatement(sql);
         statement.bindString(1,"ins123");
         for(int i=0;i<22;i++)
@@ -401,5 +406,241 @@ public class Database {
         } catch (SQLiteException e) {
             Log.w("insert fail", e.getMessage());
         }
+    }
+
+    public void saveSyncDetails(String value[])
+    {
+        String sql="INSERT INTO `SYNC_DETAILS` VALUES ( ?,?,?)";
+        SQLiteStatement statement=ourDatabase.compileStatement(sql);
+        statement.bindString(1,value[0]);
+        statement.bindLong(2,Long.parseLong(value[1]));
+        statement.bindString(3,value[2]);
+        try{
+            long rowId=statement.executeInsert();
+            Log.w("insert success","Insert success");
+        } catch (SQLiteException e) {
+            Log.w("insert fail", e.getMessage());
+        }
+    }
+
+    /*------------------------------Methods for extracting data from SQLite db-----------------------------*/
+
+
+
+    public String[][] getBatteryData(String ins_id[]){
+        Cursor cursor;
+        cursor=ourDatabase.query("Battery",null,"ins_id=?",ins_id,null,null,null);
+        int rowCount=cursor.getCount();
+        String result[][]=new String[rowCount][5];
+        if(cursor!=null) {
+            for(int i=0;i<rowCount;i++)
+            {
+                cursor.moveToPosition(i);
+                result[i][0]=cursor.getString(0);  //ins_id
+                result[i][1]=Long.toString(cursor.getLong(1)); //water_level
+                result[i][2]=Long.toString(cursor.getLong(2)); //terminal
+                result[i][3]=Long.toString(cursor.getLong(3)); //voltage
+                result[i][4]=Long.toString(cursor.getLong(4)); //gravity
+            }
+        }
+        cursor.close();
+        return result;
+    }
+
+    public String[][] getBatteryChargerData(String ins_id[]){
+        Cursor cursor;
+        cursor=ourDatabase.query("BatteryCharger",null,"ins_id=?",ins_id,null,null,null);
+        int rowCount=cursor.getCount();
+        String result[][]=new String[rowCount][4];
+        if(cursor!=null) {
+            for(int i=0;i<rowCount;i++)
+            {
+                cursor.moveToPosition(i);
+                result[i][0]=cursor.getString(0);  //ins_id
+                result[i][1]=Long.toString(cursor.getLong(1)); //supplyVoltageAC
+                result[i][2]=Long.toString(cursor.getLong(2)); //supplyVoltageDC
+                result[i][3]=Long.toString(cursor.getLong(3)); //ChargingCurrent
+            }
+        }
+        cursor.close();
+        return result;
+    }
+
+    public String[][] getPowerTransformerData(String ins_id[]){
+        Cursor cursor;
+        cursor=ourDatabase.query("PowerTransformer",null,"ins_id=?",ins_id,null,null,null);
+        int rowCount=cursor.getCount();
+        String result[][]=new String[rowCount][20];
+        if(cursor!=null)
+        {
+
+            for (int i = 0; i < rowCount; i++) {
+                cursor.moveToPosition(i);
+                for (int j = 0; j < 7; j++)
+                    result[i][j] = cursor.getString(j); //pss_id to BDVBottom
+                result[i][8] = Long.toString(cursor.getLong(8)); //BuchholzRelay
+                result[i][9] = cursor.getString(9);  //OilLeakage
+                for (int j = 10; j < 18; j++)
+                    result[i][j] = Long.toString(cursor.getLong(j)); //TempMeterWinding to BrushConnectors
+                result[i][18] = cursor.getString(18);    //Plinth
+                result[i][19] = cursor.getString(19);    //EarthPit&connector
+                //move to next record
+            }
+        }
+        cursor.close();
+        return result;
+    }
+
+
+    public String[][] getVCBData(String ins_id[]){
+        Cursor cursor;
+        cursor=ourDatabase.query("VCB",null,"ins_id=?",ins_id,null,null,null);
+        int rowCount=cursor.getCount();
+        String result[][]=new String[rowCount][15];
+        if(cursor!=null)
+        {
+            for(int i=0;i<rowCount;i++)
+            {
+                cursor.moveToPosition(i);
+                for(int j=0;j<3;j++)
+                    result[i][j]=cursor.getString(j);  //ins_id to Name
+                for(int j=3;j<12;j++)
+                    result[i][j]=Long.toString(cursor.getLong(j)); //CT to MasterTripRelay
+                for(int j=12;j<15;j++)
+                    result[i][j]=cursor.getString(j);  //SL_no to Make
+            }
+        }
+        cursor.close();
+        return result;
+    }
+
+    public String[][] getIsolatorData(String ins_id[]){
+        Cursor cursor;
+        cursor=ourDatabase.query("Isolator",null,"ins_id=?",ins_id,null,null,null);
+        int rowCount=cursor.getCount();
+        String result[][]=new String[rowCount][5];
+        if(cursor!=null)
+        {
+            for(int i=0;i<rowCount;i++)
+            {
+                cursor.moveToPosition(i);
+                result[i][0]=cursor.getString(0);  //ins_id
+                for(int j=1;j<4;j++)
+                    result[i][j]=Long.toString(cursor.getLong(j)); //Total, working, defective
+                result[i][4]=cursor.getString(4);  //Type
+            }
+        }
+        cursor.close();
+        return result;
+    }
+
+    public String[][] getMaterialsData(String ins_id[]){
+        Cursor cursor;
+        cursor=ourDatabase.query("Materials",null,"ins_id=?",ins_id,null,null,null);
+        int rowCount=cursor.getCount();
+        String result[][]=new String[rowCount][4];
+        if(cursor!=null)
+        {
+            for(int i=0;i<rowCount;i++)
+            {
+                cursor.moveToPosition(i);
+                result[i][0]=cursor.getString(0);  //ins_id
+                result[i][1]=cursor.getString(1);  //Name
+                result[i][2]=Long.toString(cursor.getLong(2)); //for 33KV
+                result[i][3]=Long.toString(cursor.getLong(3));  //for 11KV
+            }
+        }
+        cursor.close();
+        return result;
+    }
+
+    public String[][] getLAData(String ins_id[]){
+        Cursor cursor;
+        cursor=ourDatabase.query("LA",null,"ins_id=?",ins_id,null,null,null);
+        int rowCount=cursor.getCount();
+        String result[][]=new String[rowCount][7];
+        if(cursor!=null)
+        {
+            for(int i=0;i<rowCount;i++)
+            {
+                cursor.moveToPosition(i);
+                result[i][0]=cursor.getString(0);  //ins_id
+                for(int j=1;j<5;j++)
+                    result[i][j]=Long.toString(cursor.getLong(j)); //Total, working, defective, required
+                result[i][5]=cursor.getString(4);  //Remarks
+                result[i][6]=cursor.getString(4);  //Type
+            }
+        }
+        cursor.close();
+        return result;
+    }
+
+    public String[][] getMeterData(String ins_id[]) {
+        Cursor cursor;
+        cursor = ourDatabase.query("Meter", null, "ins_id=?", ins_id, null, null, null);
+        int rowCount=cursor.getCount();
+        String result[][] = new String[rowCount][5];
+        if(cursor!=null)
+        {
+            for (int i=0;i<rowCount;i++)
+            {
+                cursor.moveToPosition(i);
+                result[i][0]=cursor.getString(0);  //ins_id
+                result[i][1]=Long.toString(cursor.getLong(1)); //total
+                result[i][2]=Long.toString(cursor.getLong(2)); //working
+                result[i][3]=Long.toString(cursor.getLong(3)); //defective
+                result[i][4]=cursor.getString(4);  //type
+            }
+
+        }
+        cursor.close();
+        return result;
+    }
+
+    public String[][] getMeteringUnitData(String ins_id[]){
+        Cursor cursor;
+        cursor=ourDatabase.query("MeteringUnit",null,"ins_id=?",ins_id,null,null,null);
+        int rowCount=cursor.getCount();
+        String result[][]=new String[rowCount][7];
+        if(cursor!=null)
+        {
+            for(int i=0;i<rowCount;i++)
+            {
+                cursor.moveToPosition(i);
+                result[i][0]=cursor.getString(0);  //ins_id
+                result[i][1]=Long.toString(cursor.getLong(1)); //total
+                result[i][2]=Long.toString(cursor.getLong(2)); //working
+                result[i][3]=Long.toString(cursor.getLong(3)); //defective
+                result[i][4]=cursor.getString(4);  //type
+            }
+        }
+        cursor.close();
+        return result;
+    }
+
+    public String[][] getGeneralReportData(String ins_id[]){
+        Cursor cursor;
+        cursor=ourDatabase.query("GeneralReport",null,"ins_id=?",ins_id,null,null,null);
+        int rowCount=cursor.getCount();
+        String result[][]=new String[rowCount][23];
+        if(cursor!=null)
+        {
+            for(int i=0;i<rowCount;i++)
+            {
+                cursor.moveToPosition(i);
+                result[i][0]=cursor.getString(0);  //ins_id
+                for(int j=1;j<23;j++)
+                    result[i][j]=Long.toString(cursor.getLong(j)); //A to S
+            }
+        }
+        cursor.close();
+        return result;
+    }
+
+    public Cursor getSyncDetailsData()
+    {
+        Cursor cursor;
+        cursor=ourDatabase.query("SYNC_DETAILS",null,null,null,null,null,null);
+        return cursor;
     }
 }

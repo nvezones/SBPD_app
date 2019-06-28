@@ -23,8 +23,6 @@ import com.example.sbpd_app.Forms.VCB33KV;
 
 public class Home extends AppCompatActivity {
 
-    private long backpresstime;
-    Toast toastback;
     LinearLayout form1,isofrm,statuskvla,statuskvmeter,powertrans,material,vcb33,vcb11,genReport,meter,photoattachment;
     CardView cardView,cardView1;
     @Override
@@ -123,22 +121,5 @@ public class Home extends AppCompatActivity {
         });
     }
 
-    @Override
-    public void onBackPressed() {
 
-        if(backpresstime+2000>System.currentTimeMillis())
-        {
-            super.onBackPressed();
-            toastback.cancel();
-            return;
-
-        }
-        else
-        {
-            toastback=Toast.makeText(getBaseContext(),"Please back again to exit",Toast.LENGTH_SHORT);
-            toastback.show();
-        }
-        backpresstime=System.currentTimeMillis();
-
-    }
 }

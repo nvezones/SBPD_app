@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.example.sbpd_app.Database;
 import com.example.sbpd_app.R;
+import com.example.sbpd_app.SyncScreen;
 
 import org.w3c.dom.Text;
 
@@ -25,14 +26,12 @@ public class PowerTransformer extends AppCompatActivity {
     Spinner sp;
     EditText et[] = new EditText[11];
     RadioButton rb[] = new RadioButton[12];
-    Button btnSave;
+    Button btnSave,btn1;
     ScrollView scrollView;
-    TextView tv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_power_transformer);
-
         sp = (Spinner) findViewById(R.id.spId_PT);
         et[0] = (EditText) findViewById(R.id.etId_slno);
         et[1] = (EditText) findViewById(R.id.etId_mfgYear);
@@ -66,7 +65,6 @@ public class PowerTransformer extends AppCompatActivity {
 
         btnSave = (Button) findViewById(R.id.btnId_update);
         scrollView=(ScrollView)findViewById(R.id.scrollPT);
-        tv=(TextView)findViewById(R.id.cus_profile_name);
         //by default negative options will be selected
         for (int i = 0; i < 12; i++)
             if (i % 2 != 0) rb[i].setChecked(true);

@@ -174,7 +174,7 @@ public class GeneralReport extends AppCompatActivity {
         {
             Toast.makeText(GeneralReport.this,""+e.getMessage(),Toast.LENGTH_SHORT).show();
         }
-        startActivity(new Intent(GeneralReport.this,com.example.sbpd_app.Home.class));
+        startActivity(new Intent(GeneralReport.this,com.example.sbpd_app.MenuScreen.class));
     }
 
     @Override

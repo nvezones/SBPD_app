@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 finally {
                     startActivity(new Intent(getApplicationContext(), LoginScreen.class));
+                    //startActivity(new Intent(getApplicationContext(),MenuScreen.class));
                     finish();
                 }
             }
