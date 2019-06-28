@@ -12,10 +12,10 @@ import java.util.Map;
 
 public class SynForm1 extends StringRequest {
 
-    private static final String REGISTER_URL = "url_for_web";
+    private static final String REGISTER_URL = "https://url_for_web.com";
     private Map<String, String> parameters;
 
-    public SynForm1(String col1,String col2,String col3,Response.Listener<String> listener {
+    public SynForm1(String col1,String col2,String col3,Response.Listener<String> listener) {
         super(Method.POST,REGISTER_URL, listener, null);
         this.parameters = parameters;
         parameters = new HashMap<>();
