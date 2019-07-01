@@ -1,10 +1,13 @@
 package com.example.sbpd_app;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteStatement;
 import android.graphics.Color;
 import android.support.v4.view.ViewCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Layout;
@@ -16,8 +19,13 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
 import com.example.sbpd_app.PhpUtils.SyncMeter;
 
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.w3c.dom.Text;
 
 import java.sql.Time;
@@ -31,12 +39,14 @@ public class SyncScreen extends AppCompatActivity {
     TableLayout tableLayout;
     Cursor syncTable;
     String insIdToSync="";
+    RequestQueue requestQueue;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sync_screen);
         tableLayout = (TableLayout) findViewById(R.id.tblSync);
         tableLayout.removeAllViews();
+        requestQueue = Volley.newRequestQueue(SyncScreen.this);
         //adding the column heading row
         TableRow heading=new TableRow(SyncScreen.this);
         heading.setLayoutParams(new TableRow.LayoutParams((TableRow.LayoutParams.MATCH_PARENT),TableRow.LayoutParams.WRAP_CONTENT));
@@ -136,6 +146,7 @@ public class SyncScreen extends AppCompatActivity {
             tv1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    startSync();
                     if(tv2.getText().toString().equals("NOT SYNCED")) {
                         Toast.makeText(getApplicationContext(), tv1.getText().toString(), Toast.LENGTH_SHORT).show();
                         insIdToSync = tv1.getText().toString().trim();
@@ -156,11 +167,38 @@ public class SyncScreen extends AppCompatActivity {
             Database db=new Database(this);
             db.open();
             SyncMeter.value=db.getMeterData(ins);
+            synMeterFunction();
+
             db.close();
         }catch (SQLiteException e)
         {
             Log.w("database fetch error",e.getMessage());
         }
+    }
+
+
+    public void synMeterFunction()
+    {
+        SyncMeter syncMeter=new SyncMeter(new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                Log.i("Response", response);
+                Toast.makeText(SyncScreen.this, "inside meter", Toast.LENGTH_LONG).show();
+
+                try {
+                    if (new JSONObject(response).getString("status").equals(("true"))) {
+
+                        Toast.makeText(SyncScreen.this, "Meter data Synchronized", Toast.LENGTH_LONG).show();
+
+                    } else
+                        Toast.makeText(SyncScreen.this, "Something Has Happened. Please Try Again!", Toast.LENGTH_SHORT).show();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        requestQueue.add(syncMeter);
+
     }
 
 }
